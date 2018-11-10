@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attornify</title>
+	<script>!function(){function e(e){if(e in n)return!0;for(var t=o.length,r=e.replace(/^-/,"").replace(/^[a-z]/,function(e){return e.toUpperCase()}).replace(/([a-z])-([a-z])/g,function(e,t,r){return t+r.toUpperCase()});t--;)if(o[t]+r in n)return!0;return!1}function t(e,t,n,i){function s(e,t){try{return r.removeAttribute("style"),r.setAttribute("style",e+":"+t),r.style[e]==t}catch(n){}return!1}if(i)return s(e,t);if(s(e,t))return!0;if(n[0]!=e||n[1]!=t)for(var a=o.length;a--;)if(s(n[0]==e?e:"-"+o[a].toLowerCase()+"-"+e,n[1]==t?t:"-"+o[a].toLowerCase()+"-"+t))return!0;return!1}var r=document.createElement("div"),n=r.style,i=document.documentElement,o=["O","Moz","ms","Webkit"],s=!0,a=[["flex","box-flex"],"display:table","transform"],c=a.length,u="js "+i.className.replace(/no-js[\s]?\b/g,""),w=/*@cc_on (function(){switch(@_jscript_version){case 1.0:return 3;case 3.0:return 4;case 5.0:return 5;case 5.1:return 5;case 5.5:return 5.5;case 5.6:return 6;case 5.7:return 7;case 5.8:return 8;case 9:return 9;case 10:return 10;}})()||@*/0;u+=w?"e"+w+" ":"",u+=!window.ActiveXObject&&"ActiveXObject"in window?"e11 ":"";try{u+=CSS.supports("-ms-accelerator","true")?"ed ":""}catch(l){}u+=/constructor/i.test(window.HTMLElement)?"sf ":"",u+="MozAppearance"in i.style?"ff ":"",u+="WebkitAppearance"in i.style?"wk ":"",u+=window.chrome&&window.chrome.webstore?"crd ":"",/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream&&(u+="i"+(window.indexedDB?"s i8u ":window.SpeechSynthesisUtterance?"s i7 ":window.webkitAudioContext?"s i6 ":window.matchMedia?"s i5 ":window.history&&"pushState"in window.history?"s i4 ":"s i3b ")),u+="ontouchstart"in window?"touch ":"no-touch ";for(;c--;){var d=!1,f="";if(a[c]instanceof Array){var p=a[c].length;for(f=a[c][0];p--;)if(e(a[c][p])){d=!0;break}}else if(a[c].indexOf(":")>0){var h=a[c].split(":"),m=h[0].replace(/^-/,""),b=h[1].replace(/^-/,"");d=t(m,b,h),f=m.substring(0,3)+"-"+b}else d=e(a[c]),f=a[c];s&&(u+=d?f+" ":"no-"+f+" ")}i.className=u.replace(/\s+$/,"")}();</script>
+	<link href='//fonts.googleapis.com/css?family=Roboto:300,400,700|Signika:300,400,700|Poppins:400,700' rel='stylesheet' type='text/css'>
+	<link href="assets/css/styles.css" rel="stylesheet" media="all">
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js" media="all"></script><![endif]-->
+</head>
+<body  class="profilesingle">
+
+<header class="header enw" role="banner">
+	<div class="encase fx">
+		<a href="landing.html" class="logo fx ac fn">
+			<img src="assets/images/logo-black.png" alt="Attornify Logo">
+		</a>
+		<div class="fx jfe f1a">
+			<div>
+				<nav class="nav" role="navigation">
+					<ul class="top up fx jfe">
+						<li><a href="#">ARE YOU AN ATTORNEY?</a></li>
+						<li>
+							<a class="modalOpener" id="modalOpenerSignup" href="#">SIGN UP</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Register</div>
+										<div class="help">Already a member? <a class="link switchTo" data-switchto="login" href="#">Log In</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="signin">
+							Already a member? <a class="modalOpener" id="modalOpenerSignin" href="#">SIGN IN</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Login to Attornify</div>
+										<div class="help">Not a member yet? <a class="link switchTo" data-switchto="signup" href="#">Register Now</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<nav class="nav" role="navigation">
+					<ul class="top down fx jfe">
+						<li class="active">
+							<a href="#">FIND AN ATTORNEY</a>
+						</li>
+						<li><a href="#">HOW IT WORKS</a></li>
+						<li><a href="#">RESOURCES</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="stack1 enw pr ts" id="topMap">
+	<div id="map" style="height:100%;"></div>
+	<div class="mapOver pa">
+		<div class="map-violet-outer">
+			<div class="encase">
+				<div class="fx ac nu map-violet-inner">
+					<div class="ff-sg">
+						<div class="bread">Search Results <span class="rarrow ml5"></span></div>
+						<div class="lead">Attorney Profile</div>
+					</div>
+					<div class="mla fxn mr10">
+						<a class="share email" href="#"></a>
+						<a class="share" href="#"></a>
+						<a class="share favorites" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="encase">
+			<div class="border">
+				<div class="top bgw fx">
+					<div class="spacer"></div>
+					<div class="fxn f1a">
+						<div class="attorney-fold">
+							<div class="name">Bernard Oppenheimer <span class="new">New</span></div>
+							<div class="fxn">
+								<div class="address mr20">
+									<span class="span">William St., NY <span class="bar">|</span> <strong>0.8mi</strong></span>
+								</div>
+								<div class="languages">
+									<span class="span">Language Spoken<span class="mr10"></span>Espaniol <span class="bar">|</span> עִברִית <span class="bar">|</span> English</span>
+								</div>
+							</div>
+						</div>
+						<div class="mla">
+							<a class="btn confirm uc splash modalOpener" href="#">SCHEDULE AN APPOINTMENT</a>
+							<div class="modCont dn">
+								<div class="saap">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Schedule an Appointment</div>
+									</div>
+									<div class="mBody fx">
+										<div class="info f1 fxc ac tac">
+											<div class="portrait"><img src="assets/images/attorni-Bernard-Oppenheimer.png" alt="Attorni Bernard Oppenheimer"></div>
+											<div class="attInfo">
+												<div class="ff-sg">Bernard Oppenheimer</div>
+												<div class="ff-pp"><span class="span">William St., NY  <span class="bar">|</span>  <strong>0.8mi</strong></span></div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+												<div class="pareas"><strong>Practice Areas</strong> Criminal Defense, Criminal Psychology</div>
+												<div class="review fx">
+													<div class="ff-pp">$150/hr + Fixed Price</div>
+													<div class="ff-pp">93.2%  |   442 Reviews</div>
+												</div>
+											</div>
+											<div class="bloc">
+												<address class="address">The Law Offices of Bernard Oppenheimer 343, 42nd St, New York City, NY (432) 343-2453</address>
+												<div class="mapsnap"><img class="fit" src="assets/images/modal-map.jpg" alt="The Law Offices of Bernard Oppenheimer 343, 42nd St, New York City, NY (432) 343-2453"></div>
+											</div>
+										</div>
+										<div class="content">
+											<div class="steps pr fx">
+												<div class="step step1 active">
+													<big class="ff-sg db cd">Choose a Day</big>
+													<span class="selecttime db sml">Select an available time to schedule your appointment...</span>
+													<div class="enfold">
+														<div class="dayw cfxn afe weekdays">
+															<div class="arrow left"></div>
+															<div class="day-in f1 pr">
+																<div class="fxn cfn afe pr dayBar">
+																	<div class="day open">
+																		<span class="weekday">Sun</span><span class='date'>Dec 20</span>
+																	</div>
+																	<div class="day close">
+																		<span class="weekday">Mon</span><span class='date'>Dec 21</span>
+																	</div>
+																	<div class="day close">
+																		<span class="weekday">Tue</span><span class='date'>Dec 22</span>
+																	</div>
+																	<div class="day open active">
+																		<span class="weekday">Wed</span><span class='date'>Dec 23</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Thu</span><span class='date'>Dec 24</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Fri</span><span class='date'>Dec 25</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Sat</span><span class='date'>Dec 26</span>
+																	</div>
+																	<div class="day close">
+																		<span class="weekday">Sun</span><span class='date'>Dec 27</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Mon</span><span class='date'>Dec 28</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Tue</span><span class='date'>Dec 29</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Wed</span><span class='date'>Dec 30</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Thu</span><span class='date'>Dec 31</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Sun</span><span class='date'>Dec 20</span>
+																	</div>
+																	<div class="day close">
+																		<span class="weekday">Mon</span><span class='date'>Dec 21</span>
+																	</div>
+																	<div class="day close">
+																		<span class="weekday">Tue</span><span class='date'>Dec 22</span>
+																	</div>
+																	<div class="day open active">
+																		<span class="weekday">Wed</span><span class='date'>Dec 23</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Thu</span><span class='date'>Dec 24</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Fri</span><span class='date'>Dec 25</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Sat</span><span class='date'>Dec 26</span>
+																	</div>
+																	<div class="day close">
+																		<span class="weekday">Sun</span><span class='date'>Dec 27</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Mon</span><span class='date'>Dec 28</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Tue</span><span class='date'>Dec 29</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Wed</span><span class='date'>Dec 30</span>
+																	</div>
+																	<div class="day open">
+																		<span class="weekday">Thu</span><span class='date'>Dec 31</span>
+																	</div>
+																</div>
+															</div>
+															<div class="arrow right"></div>
+														</div>
+														<div class="day-slabs">
+															<div class="fold">
+																<div class="lead">Morning</div>
+																<div class="slabs fx">
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">11:00 am</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">11:30 am</span>
+																	</label>
+																</div>
+															</div>
+															<div class="fold">
+																<div class="lead">Afternoon</div>
+																<div class="slabs fx">
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">12:00 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0" checked>
+																		<span class="db">1:00 pm</span>
+																	</label>
+
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">1:30 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0" disabled>
+																		<span class="db shake">2:00 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0" disabled>
+																		<span class="db shake">3:30 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">1:30 pm</span>
+																	</label>
+																</div>
+															</div>
+															<div class="fold">
+																<div class="lead">Evening</div>
+																<div class="slabs fx">
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">4:30 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">5:00 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">5:30 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">6:00 pm</span>
+																	</label>
+																	<label class="slab cstRdo fx ac fn">
+																		<input type="radio" name="timeSlab" value="0">
+																		<span class="db">6:30 pm</span>
+																	</label>
+																</div>
+															</div>
+															<div class="fold fx">
+																<a class="another-time" href="#">Request another time</a>
+															</div>
+														</div>
+														<div class="comment">
+															<div class="fx ac">
+																<div class="lead">Add a Comment</div>
+																<div class="optional sml">Optional</div>
+															</div>
+															<textarea class="textarea tsb"></textarea>
+															<div class="appConfirm fx jsb ac">
+																<button class="btn cancel">Cancel</button>
+																<button class="btn confirm uc splash btnConfirmAppointmentStep1">CONFIRM APPOINTMEnt</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="step step2 fxc">
+													<div class="date-head">
+														<div class="enfold">
+															<div class="line">Wednesday, Dec 23, 2016</div>
+															<div class="line">01:00pm <a class="change link" href="#">Change Date / Time</a></div>
+														</div>
+													</div>
+													<div class="enfold mid">
+														<div>Almost done! Tell us about yourself to book this appointment...</div>
+														<div class="memberlogin">Already a member? <a class="link" href="#0">Log in here</a></div>
+														<div class="form">
+															<div class="inputeffectfold fx afe">
+																<input class="input" type="text" value="" placeholder="">
+																<label class="label"><span class="span">Name</span></label>
+															</div>
+															<div class="inputeffectfold fx afe">
+																<input class="input" type="text" value="" placeholder="">
+																<label class="label"><span class="span">Email address</span></label>
+															</div>
+															<div class="inputeffectfold fx afe">
+																<input class="input" type="text" value="" placeholder="">
+																<label class="label"><span class="span">Phone Number</span></label>
+															</div>
+														</div>
+														<div class="instruction">We’ll send you a One-Time-Password on this number to confirm your account</div>
+													</div>
+													<div class="appConfirm fx jsb ac">
+														<button class="btn cancel">Cancel</button>
+														<button class="btn confirm uc splash btnConfirmAppointmentStep2">CONFIRM APPOINTMEnt</button>
+													</div>
+												</div>
+												<div class="step step3 fxc">
+													<div class="appconfirmed ff-sg">Your appointment is <strong>Confirmed!</strong></div>
+													<div class="date-head fxn">
+														<div class="enfold f1">
+															<div class="line">Wednesday, Dec 23, 2016</div>
+															<div class="line">01:00pm <a class="change link" href="#">Change Date / Time</a></div>
+														</div>
+														<div class="push-notify">
+															<label class="cstRdo fx ac fn">
+																<input id="searchResultsMapViewOn" type="checkbox" name="mapView" value="" checked><span></span>Enable Push Notifications
+															</label>
+														</div>
+													</div>
+													<div class="enfold mid">
+														<p class="p">Your appointment is confirmed. We do recommend you call the attorney beforehand to see if you need to share any documents or other materials prior to your meeting. You can always Reschedule, or Cancel your appointment if needed from your Dashboard! </p>
+														<a class="link" href="#0">View My Dashboard</a>
+													</div>
+													<div class="whatsnext">
+														<div class="ff-sg tac">
+															<h2 class="h2">So, what’s next?</h2>
+															<span class="span">There’s a lot more to Attornify than just attorney listings & appointments!</span>
+														</div>
+														<div class="nextcols fxn jsb">
+															<div class="item">
+																<h3 class="h3">Collaborate</h3>
+																<p class="copy">Use our in-built messaging features to securely exchange messages and documents with the attorneys you work with. </p>
+															</div>
+															<div class="item feedback">
+																<h3 class="h3">Feedback &amp; Reviews</h3>
+																<p class="copy">Your feedback for the attorneys based on your experience ensures they deliver on the promises they make!</p>
+															</div>
+															<div class="item keeprecord">
+																<h3 class="h3">Keep a Record</h3>
+																<p class="copy">Attornify helps you keep all your legal records in one place - simple, and easy access whenever and wherever you want!</p>
+															</div>
+														</div>
+													</div>
+													<div class="bottom tac">All features may be available to different degrees at different stages of your interaction with Attornify</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom fx">
+					<div class="spacer">
+						<div class="profile-image fx jc pr"><img class="round" src="assets/images/attorney-profile-single-portrait.jpg" alt="Bernard Oppenheimer"></div>
+					</div>
+					<div class="fx">
+						<div class="item">
+							<div class="head">Practice Areas</div>
+							<div class="fx">
+								<div class="parea copy">Criminal Defense</div>
+								<div class="parea copy">Medical Liability</div>
+								<div class="parea copy">Insurance Claims</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="head">Pricing</div>
+							<div class="copy">$150/hr + Fixed Price</div>
+						</div>
+						<div class="item">
+							<div class="head">Feedback</div>
+							<div class="fxc">
+								<div class="copy">97% <span class="bar">|</span> 442 Reviews</div>
+								<a class="link" href="#">View Feedback</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mapOver pa btm">
+		<div class="mapcollapse uc m0a" id="clicktocollapse">CLICK TO COLLAPSE</div>
+	</div>
+</div>
+<div class="bgw">
+	<div class="encase pr fx">
+		<div class="profile-body bgw tb">
+			<div class="profile-left" id="main-content">
+				<section class="section">
+					<h3 class="h3 ff-sg">Experienced Criminal Defense and Claims Attorney in New York</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</section>
+				<section class="section">
+					<h4 class="h4">Bar Admissions</h4>
+					<ul class="admission fxc">
+						<li class="fx"><span class="year">1984</span> New York</li>
+						<li class="fx"><span class="year">1984</span> U.S. District Court Northern District of New York</li>
+						<li class="fx"><span class="year">1985</span> U.S. Court of Appeals 2nd Circuit</li>
+						<li class="fx"><span class="year">2013</span> Vermont</li>
+					</ul>
+				</section>
+				<section class="section">
+					<h4 class="h4">Education</h4>
+					<div class="education">
+						<div><strong>Notre Dame Law School</strong>, Notre Dame, Indiana</div>
+						<div>J.D. - 1983</div>
+					</div>
+					<div class="education">
+						<div><strong>St. Lawrence University</strong>, Canton, New York</div>
+						<div>B.S. Magna-cum-Laude - 1980</div>
+						<div>Honors: Phi Beta Kappa <span class="bar">|</span> Omicron Delta Kappa</div>
+					</div>
+					<div class="education">
+						<div><strong>University of Copenhagen</strong>, Copenhagen, Denmark</div>
+						<div>BA - 1978</div>
+					</div>
+				</section>
+				<section class="section">
+					<h4 class="h4">Career Highlights</h4>
+					<ul class="career">
+						<li class="li">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </li>
+						<li class="li">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </li>
+						<li class="li">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </li>
+						<li class="li">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </li>
+						<li class="li">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</li>
+					</ul>
+				</section>
+				<section class="section">
+					<h4 class="h4">Gallery</h4>
+					<div class="gallery">
+						<div class="cfxn">
+							<div class="image f1a"><img class="fit" src="assets/images/attorney-profile-gallery-image-1.jpg" alt=""></div>
+							<div class="image"><img class="fit" src="assets/images/attorney-profile-gallery-image-2.jpg" alt=""></div>
+						</div>
+						<div class="cfxn">
+							<div class="image f1a"><img class="fit" src="assets/images/attorney-profile-gallery-image-3.jpg" alt=""></div>
+						</div>
+						<div class="cfxn">
+							<div class="image f1a"><img class="fit" src="assets/images/attorney-profile-gallery-image-4.jpg" alt=""></div>
+							<div class="image"><img class="fit" src="assets/images/attorney-profile-gallery-image-5.jpg" alt=""></div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="profile-right">
+				<div class="profile-schedule ts" id="sticky">
+					<div class="head">
+						<div class="ff-sg">Schedule an Appointment</div>
+						<div class="info">Select an available time to schedule your appointment...</div>
+					</div>
+					<div class="dayw cfxn afe weekdays">
+						<div class="arrow left f1"></div>
+						<div class="day-in pr">
+							<div class="fxn cfn afe pr dayBar">
+								<div class="day close">
+									<span class="weekday">Sun</span><span class='date'>Dec 20</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Mon</span><span class='date'>Dec 21</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Tue</span><span class='date'>Dec 22</span>
+								</div>
+								<div class="day open active">
+									<span class="weekday">Wed</span><span class='date'>Dec 23</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Thu</span><span class='date'>Dec 24</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Fri</span><span class='date'>Dec 25</span>
+								</div>
+								<div class="day close">
+									<span class="weekday">Sat</span><span class='date'>Dec 26</span>
+								</div>
+								<div class="day close">
+									<span class="weekday">Sun</span><span class='date'>Dec 27</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Mon</span><span class='date'>Dec 28</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Tue</span><span class='date'>Dec 29</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Wed</span><span class='date'>Dec 30</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Thu</span><span class='date'>Dec 31</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Sun</span><span class='date'>Dec 20</span>
+								</div>
+								<div class="day close">
+									<span class="weekday">Mon</span><span class='date'>Dec 21</span>
+								</div>
+								<div class="day close">
+									<span class="weekday">Tue</span><span class='date'>Dec 22</span>
+								</div>
+								<div class="day open active">
+									<span class="weekday">Wed</span><span class='date'>Dec 23</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Thu</span><span class='date'>Dec 24</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Fri</span><span class='date'>Dec 25</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Sat</span><span class='date'>Dec 26</span>
+								</div>
+								<div class="day close">
+									<span class="weekday">Sun</span><span class='date'>Dec 27</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Mon</span><span class='date'>Dec 28</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Tue</span><span class='date'>Dec 29</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Wed</span><span class='date'>Dec 30</span>
+								</div>
+								<div class="day open">
+									<span class="weekday">Thu</span><span class='date'>Dec 31</span>
+								</div>
+							</div>
+						</div>
+						<div class="arrow right f1"></div>
+					</div>
+					<div class="day-slabs bgw">
+						<div class="fold">
+							<div class="lead">Morning</div>
+							<div class="slabs fx">
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">11:00 am</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">11:30 am</span>
+								</label>
+							</div>
+						</div>
+						<div class="fold">
+							<div class="lead">Afternoon</div>
+							<div class="slabs fx">
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">12:00 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0" checked>
+									<span class="db">1:00 pm</span>
+								</label>
+
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">1:30 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0" disabled>
+									<span class="db shake">2:00 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0" disabled>
+									<span class="db shake">3:30 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">1:30 pm</span>
+								</label>
+							</div>
+						</div>
+						<div class="fold">
+							<div class="lead">Evening</div>
+							<div class="slabs fx">
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">4:30 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">5:00 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">5:30 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">6:00 pm</span>
+								</label>
+								<label class="slab cstRdo fx ac fn">
+									<input type="radio" name="timeSlab" value="0">
+									<span class="db">6:30 pm</span>
+								</label>
+							</div>
+						</div>
+						<div class="fold fx">
+							<a class="another-time" href="#">Request another time</a>
+						</div>
+					</div>
+					<div class="confirmapp fxm"><button class="btn confirm uc">CONFIRM APPOINTMEnt</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer enw">
+	<div class="top pr">
+		<div class="encase">
+			<div class="fxc ajc">
+				<a class="foot-logo" href="#"><img src="assets/images/logo-footer.png" alt="Attornify"></a>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+			</div>
+			<div class="tweet bgw">
+				<div class="fxc ajc">
+				<div class="uc">Voices</div>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+				<div class="who"><span class="tuser">@ronnyIBM6</span> minutes ago</div>
+				</div>
+			</div>
+			<div class="comment fxc ac">
+				<div class="lead">Have a comment, question, or, want to share something with us?</div>
+				<div class="options cfx">
+					<div class="opt op1"><a class="mt5" href="#">Feedback or Questions?</a></div>
+					<div class="opt op2"><a class="mt5" href="#">Report a Concern</a></div>
+					<div class="opt op3"><a class="mt5" href="#">Support Helpdesk</a></div>
+					<div class="opt op4"><a class="mt5" href="tel:1-800-243-2234">Priority Support<br>1-800-243-2234</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom pr">
+		<div class="encase">
+			<div class="links bgw pr cfxn">
+				<div class="left">
+					<div class="col3">
+						<div class="lead">About</div>
+						<ul class="nav">
+							<li><a href="#">Our Company</a></li>
+							<li><a href="#">Executive Team</a></li>
+							<li><a href="#">Awards &amp; Recognition</a></li>
+							<li><a href="#">Investor Relations</a></li>
+							<li><a href="#">Press Center</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col3">
+						<div class="lead">FOR USERS</div>
+						<ul class="nav">
+							<li><a href="#">How It Works</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Customer Support</a></li>
+						</ul>
+					</div>
+					<div class="col3">
+						<div class="lead">FOR ATTORNEYS</div>
+						<ul class="nav">
+							<li><a href="#">List Your Practice</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Content Submissions</a></li>
+							<li><a href="#">Managing Your Profile</a></li>
+							<li><a href="#">Priority Support</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right f1a fxc">
+					<div class="lead">STAY IN TOUCH</div>
+					<div class="subscribe">Subscribe to our newsletter...</div>
+					<input class="inputsubscribe" type="text" name="subscribe" value="" placeholder="Your email address">
+					<div class="social fx">
+						<a class="icon fbook" href="#"></a>
+						<a class="icon twter" href="#"></a>
+						<a class="icon linked" href="#"></a>
+						<a class="icon tube" href="#"></a>
+						<a class="icon goog" href="#"></a>
+					</div>
+				</div>
+			</div>
+			<div class="copyright fx jsb">
+				<div class="left">©2016 <a href="#">ATTORNIFY</a>, LLP. All Rights Reserved.</div>
+				<ul class="nav fx">
+					<li><a href="#">PRIVACY POLICY</a></li>
+					<li>|</li>
+					<li><a href="#">TERMS OF USE</a></li>
+					<li>|</li>
+					<li><a href="#">INFORMATION SECURITY</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="mOverlay pf" id="modalOverlay"></div>
+<div class="modal pf">
+<div class="encase">
+	<div class="modalenfold pr fxn jc afs">
+		<div id="modalContent" class="pr">
+		</div>
+		<div id="btnModalClose" class="pa"></div>
+	</div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jsapi.js"></script>
+
+
+<script type="text/javascript">
+(function($){
+	/*
+	 *	Scripts for parofile page..
+	 */
+
+
+	//	Click to Collupse / Expand
+
+	var $topMap = $('#topMap'),
+		$clicktocollapse = $('#clicktocollapse');
+
+	$clicktocollapse.click(function(){
+		if($topMap.hasClass('collapsed')){
+			$topMap.removeClass('collapsed');
+			$(this).text('CLICK TO COLLAPSE');
+		}
+		else{
+			$topMap.addClass('collapsed');
+			$(this).text('CLICK TO Expand');
+		}
+	});
+
+	/*
+	 *	Sticky SideBar
+	 *	Based On - http://zurb.com/building-blocks/sticky-sidebar
+	 *	Modified for performance
+	 */
+
+	var scrollTimeout;	// global for any pending scrollTimeout
+
+	var stickySidebar = $('#sticky');
+	var $mainContent = $('#main-content');
+
+	if (stickySidebar.length > 0) {
+		var stickyHeight = stickySidebar.height(),
+			sidebarTop = stickySidebar.offset().top,
+			mainContentHeight = $mainContent.height(),
+			tempTop = 0,
+			sidebarBottom = 0,
+			stickyStop = 0;
+	}
+	$(window).load(function(){
+		mainContentHeight = $mainContent.height();
+	})
+
+	$(window).scroll(function () {
+		if (scrollTimeout) {
+			clearTimeout(scrollTimeout);
+			scrollTimeout = null;
+		}
+		scrollTimeout = setTimeout(function() {
+			if (stickySidebar.length > 0) {
+				var scrollTop = $(window).scrollTop();
+
+				if (sidebarTop < scrollTop) {
+					stickySidebar.css({'transform':'translateY('+(scrollTop - sidebarTop)+'px)' } );
+					sidebarBottom = stickySidebar.offset().top + stickyHeight,
+					stickyStop = $mainContent.offset().top + mainContentHeight;
+					if (stickyStop < sidebarBottom) {
+						stickySidebar.css({'transform':'translateY('+(mainContentHeight - stickyHeight)+'px)' } );
+					}
+				}
+				else {
+					stickySidebar.css({'transform': 'translateY(0)'});
+				}
+			}
+		}, 30);
+	});
+
+	$(window).resize(function () {
+		if (stickySidebar.length > 0) {
+			stickyHeight = stickySidebar.height();
+		}
+	});
+})(jQuery);
+</script>
+
+<script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDilsvXvNravVFtHJD8gd1tpziE4Fb5UkA&callback=initMap"></script>
+<script>
+	// Custom Google Map for profile page..
+	var styles = [{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#b9bece"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}];
+
+
+	var locations = [
+		 ['Bernard Oppenheimer',41.717882,-74.5053707,7,'http://s32.postimg.org/vx9586yx1/google_map_marker_profile_single.png']
+	];
+
+	var markers = [];
+	var map;
+	var infowindow;
+
+	function initMap() {
+		var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});
+
+		map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 8,
+			scrollwheel: false,
+			mapTypeControl: false,
+			center: {lat: 41.81, lng: -75.00},
+			mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+		});
+		map.mapTypes.set('map_style', styledMap);
+		map.setMapTypeId('map_style');
+
+		infowindow = new google.maps.InfoWindow();
+
+		drop();
+	}
+
+
+	function drop() {
+		clearMarkers();
+		for (var i = 0; i < locations.length; i++) {
+			addMarkerWithTimeout(locations[i], i * 500);
+		}
+	}
+
+	function addMarkerWithTimeout(location, timeout) {
+		var marker;
+		window.setTimeout(function() {
+			markers.push(marker = new google.maps.Marker({
+				position: {lat: location[1], lng: location[2]},
+				map: map,
+				icon: location[4],
+				title: location[0],
+				zIndex: location[3],
+				animation: google.maps.Animation.DROP
+			}));
+
+
+			marker.addListener('click', function() {
+				infowindow.setContent(location[0]);
+				infowindow.open(map, marker);
+			});
+		}, timeout);
+
+
+	}
+
+	function clearMarkers() {
+		for (var i = 0; i < markers.length; i++) {
+			markers[i].setMap(null);
+		}
+		markers = [];
+	}
+</script>
+
+</body>
+</html>

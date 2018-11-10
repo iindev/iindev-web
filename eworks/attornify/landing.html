@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attornify</title>
+	<script>!function(){function e(e){if(e in n)return!0;for(var t=o.length,r=e.replace(/^-/,"").replace(/^[a-z]/,function(e){return e.toUpperCase()}).replace(/([a-z])-([a-z])/g,function(e,t,r){return t+r.toUpperCase()});t--;)if(o[t]+r in n)return!0;return!1}function t(e,t,n,i){function s(e,t){try{return r.removeAttribute("style"),r.setAttribute("style",e+":"+t),r.style[e]==t}catch(n){}return!1}if(i)return s(e,t);if(s(e,t))return!0;if(n[0]!=e||n[1]!=t)for(var a=o.length;a--;)if(s(n[0]==e?e:"-"+o[a].toLowerCase()+"-"+e,n[1]==t?t:"-"+o[a].toLowerCase()+"-"+t))return!0;return!1}var r=document.createElement("div"),n=r.style,i=document.documentElement,o=["O","Moz","ms","Webkit"],s=!0,a=[["flex","box-flex"],"display:table","transform"],c=a.length,u="js "+i.className.replace(/no-js[\s]?\b/g,""),w=/*@cc_on (function(){switch(@_jscript_version){case 1.0:return 3;case 3.0:return 4;case 5.0:return 5;case 5.1:return 5;case 5.5:return 5.5;case 5.6:return 6;case 5.7:return 7;case 5.8:return 8;case 9:return 9;case 10:return 10;}})()||@*/0;u+=w?"e"+w+" ":"",u+=!window.ActiveXObject&&"ActiveXObject"in window?"e11 ":"";try{u+=CSS.supports("-ms-accelerator","true")?"ed ":""}catch(l){}u+=/constructor/i.test(window.HTMLElement)?"sf ":"",u+="MozAppearance"in i.style?"ff ":"",u+="WebkitAppearance"in i.style?"wk ":"",u+=window.chrome&&window.chrome.webstore?"crd ":"",/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream&&(u+="i"+(window.indexedDB?"s i8u ":window.SpeechSynthesisUtterance?"s i7 ":window.webkitAudioContext?"s i6 ":window.matchMedia?"s i5 ":window.history&&"pushState"in window.history?"s i4 ":"s i3b ")),u+="ontouchstart"in window?"touch ":"no-touch ";for(;c--;){var d=!1,f="";if(a[c]instanceof Array){var p=a[c].length;for(f=a[c][0];p--;)if(e(a[c][p])){d=!0;break}}else if(a[c].indexOf(":")>0){var h=a[c].split(":"),m=h[0].replace(/^-/,""),b=h[1].replace(/^-/,"");d=t(m,b,h),f=m.substring(0,3)+"-"+b}else d=e(a[c]),f=a[c];s&&(u+=d?f+" ":"no-"+f+" ")}i.className=u.replace(/\s+$/,"")}();</script>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700|Signika:300,400,700|Poppins:400,700' rel='stylesheet' type='text/css'>
+	<link href="assets/css/styles.css" rel="stylesheet" media="all">
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js" media="all"></script><![endif]-->
+</head>
+<body class="home">
+
+<header class="header enw" role="banner">
+	<div class="encase fx">
+		<a href="landing.html" class="logo fx ac fn">
+			<img src="assets/images/logo-black.png" alt="Attornify Logo">
+		</a>
+		<div class="fx jfe f1a">
+			<div>
+				<nav class="nav" role="navigation">
+					<ul class="top up fx jfe">
+						<li><a href="#">ARE YOU AN ATTORNEY?</a></li>
+						<li>
+							<a class="modalOpener" id="modalOpenerSignup" href="#">SIGN UP</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Register</div>
+										<div class="help">Already a member? <a class="link switchTo" data-switchto="login" href="#">Log In</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="signin">
+							Already a member? <a class="modalOpener" id="modalOpenerSignin" href="#">SIGN IN</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Login to Attornify</div>
+										<div class="help">Not a member yet? <a class="link switchTo" data-switchto="signup" href="#">Register Now</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<nav class="nav" role="navigation">
+					<ul class="top down fx jfe">
+						<li class="active"><a href="#">FIND AN ATTORNEY</a></li>
+						<li><a href="#">HOW IT WORKS</a></li>
+						<li><a href="#">RESOURCES</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="stack1 enw bgw pr">
+	<div id="map" style="height:100%;"></div>
+	<div class="mapOver pa">
+		<div class="encase">
+			<div class="fxc tac">
+				<h2 class="h2">Schedule an Appointment with an Attorney. Right Now.</h2>
+				<p class="p"><img class="vam" src="assets/images/google-map-overlay-arrow.png" alt=""><strong>1,232</strong> Attorneys across 34 Practice Areas in <strong>Manhattan, NYC</strong></p>
+				<form action="#">
+					<div class="enfold fxn pr">
+						<input class="topSearchInput f1 noShadow" type="text" name="topSearch" value="" placeholder="Search for an Attorney, or Specialty area...">
+						<button class="btn advSearch">Advanced Search</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="stack2 enw pr">
+	<div class="encase fx ac">
+		<div class="copy f1">
+			<h4 class="ff-sg anim bounceInRight">Whenever, Wherever - Promise!</h4>
+			<div class="anim bounceInLeft">Attornify is available wherever, whenever you need to find an Attorney!</div>
+		</div>
+		<div class="app fx">
+			<a href="#" class="item anim bounceIn" data-delay="600"><img src="assets/images/app-store-mac-win.png" alt="Checkout our app on app stores ( iOS and Win )"></a>
+			<a href="#" class="item anim bounceIn" data-delay="900"><img src="assets/images/app-store-mac.png" alt="Checkout our app on apple app store"></a>
+			<a href="#" class="item anim bounceIn" data-delay="1200"><img src="assets/images/app-store-android.png" alt="Checkout our app on android app store."></a>
+		</div>
+	</div>
+</div>
+
+<div class="stack3 enw">
+	<div class="encase">
+		<div class="top">
+			<h3 class="ff-sg">Find Attorneys Quickly. Schedule Appointments Online.</h3>
+			<p class="copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+		</div>
+		<div class="mid fx animlow rubberBand">
+			<div class="mid-in fx nw">
+				<div class="item i1 fxm">Over 5000 Top Attorneys!</div>
+				<div class="item i2 fxm">Schedule and Manage Appointments</div>
+				<div class="item i3 fxm">Communicate &amp; Collaborate</div>
+				<div class="item i4 fxm">Free for Clients. Forever.</div>
+			</div>
+		</div>
+		<div class="btm fxn">
+			<div class="col2 c1 bdrVt right fxc afe">
+				<h2 class="h2 viol animlow fadeIn">Over 5000 Top Attorneys!</h2>
+				<p class="home-p animmid fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+				<div class="bdrPin right"></div>
+			</div>
+			<div class="col2 pr">
+				<div class="divJusticeScale pa">
+					<img class="pa justicewave infinite" src="assets/images/justice-weight-scale-arms.png" alt="">
+				</div>
+				<img class="iphoneBig pr animmid bounceInDown" src="assets/images/mid-iphone-big.png" alt="iphone">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="stack4 enw bgw">
+	<div class="encase">
+		<div class="fx jfe">
+			<div class="col2 bdrVt left pr">
+				<h2 class="h2 viol animlow fadeIn">Schedule and Manage Appointments</h2>
+				<p class="home-p animmid fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+				<div class="bdrPin left"></div>
+			</div>
+			<div class="col pr">
+				<img class="macbook pr db animmid fadeIn" src="assets/images/stack4-macbookpro-big.png" alt="">
+				<img class="iphone pr db animlow fadeInRight" data-delay="400" src="assets/images/stack4-iphone.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="stack5 enw">
+	<div class="encase">
+		<div class="col2 bdrVt right fxc afe">
+			<h2 class="h2 viol animlow fadeIn">Communicate &amp; Collaborate</h2>
+			<p class="home-p tar animmid fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+			<div class="bdrPin right"></div>
+		</div>
+		<div class="col tac fx">
+			<div class="pr m0a">
+				<div class="bubble pulse infinite"></div>
+				<img class="pr animmid zoomIn" src="assets/images/stack5-macbook.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="stack6 enw bgw nu">
+	<div class="encase fx">
+		<div class="left fxc animlow fadeInUp">
+			<h2 class="h2 viol">You’re seconds away from selecting an attorney!</h2>
+			<p class="home-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+			<strong class="note">Attornify is FREE for clients. Forever.</strong>
+		</div>
+		<div class="right fxm f1a">
+			<a class="btn animmid jello" href="#">Get Started Now</a>
+		</div>
+	</div>
+</div>
+
+<footer class="footer enw">
+	<div class="top pr">
+		<div class="encase">
+			<div class="fxc ajc">
+				<a class="foot-logo" href="#"><img src="assets/images/logo-footer.png" alt="Attornify"></a>
+				<p class="foot-p tac animlow fadeInUp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+			</div>
+			<div class="tweet bgw">
+				<div class="fxc ajc animlow fadeIn">
+				<div class="uc">Voices</div>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+				<div class="who"><span class="tuser">@ronnyIBM6</span> minutes ago</div>
+				</div>
+			</div>
+			<div class="comment fxc ac">
+				<div class="lead">Have a comment, question, or, want to share something with us?</div>
+				<div class="options cfx">
+					<div class="opt op1"><a class="mt5" href="#">Feedback or Questions?</a></div>
+					<div class="opt op2"><a class="mt5" href="#">Report a Concern</a></div>
+					<div class="opt op3"><a class="mt5" href="#">Support Helpdesk</a></div>
+					<div class="opt op4"><a class="mt5" href="tel:1-800-243-2234">Priority Support<br>1-800-243-2234</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom pr">
+		<div class="encase">
+			<div class="links bgw pr cfxn">
+				<div class="left">
+					<div class="col3 anim bounceInLeft">
+						<div class="lead">About</div>
+						<ul class="nav">
+							<li><a href="#">Our Company</a></li>
+							<li><a href="#">Executive Team</a></li>
+							<li><a href="#">Awards &amp; Recognition</a></li>
+							<li><a href="#">Investor Relations</a></li>
+							<li><a href="#">Press Center</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col3 anim bounceInLeft" data-delay="300">
+						<div class="lead">FOR USERS</div>
+						<ul class="nav">
+							<li><a href="#">How It Works</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Customer Support</a></li>
+						</ul>
+					</div>
+					<div class="col3 anim bounceInLeft" data-delay="600">
+						<div class="lead">FOR ATTORNEYS</div>
+						<ul class="nav">
+							<li><a href="#">List Your Practice</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Content Submissions</a></li>
+							<li><a href="#">Managing Your Profile</a></li>
+							<li><a href="#">Priority Support</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right f1a fxc anim fadeIn" data-delay="1200">
+					<div class="lead">STAY IN TOUCH</div>
+					<div class="subscribe">Subscribe to our newsletter...</div>
+					<input class="inputsubscribe" type="text" name="subscribe" value="" placeholder="Your email address">
+					<div class="social fx">
+						<a class="icon fbook" href="#"></a>
+						<a class="icon twter" href="#"></a>
+						<a class="icon linked" href="#"></a>
+						<a class="icon tube" href="#"></a>
+						<a class="icon goog" href="#"></a>
+					</div>
+				</div>
+			</div>
+			<div class="copyright fx jsb">
+				<div class="left">©2016 <a href="#">ATTORNIFY</a>, LLP. All Rights Reserved.</div>
+				<ul class="nav fx">
+					<li><a href="#">PRIVACY POLICY</a></li>
+					<li>|</li>
+					<li><a href="#">TERMS OF USE</a></li>
+					<li>|</li>
+					<li><a href="#">INFORMATION SECURITY</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="mOverlay pf" id="modalOverlay"></div>
+<div class="modal pf">
+<div class="encase">
+	<div class="modalenfold pr fxn jc afs">
+		<div id="modalContent" class="pr">
+		</div>
+		<div id="btnModalClose" class="pa"></div>
+	</div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript">// Waypoints
+(function(){var e=[].indexOf||function(e){for(var t=0,n=this.length;t<n;t++){if(t in this&&this[t]===e)return t}return-1},t=[].slice;(function(e,t){if(typeof define==="function"&&define.amd){return define("waypoints",["jquery"],function(n){return t(n,e)})}else{return t(e.jQuery,e)}})(this,function(n,r){var i,s,o,u,a,f,l,c,h,p,d,v,m,g,y,b;i=n(r);c=e.call(r,"ontouchstart")>=0;u={horizontal:{},vertical:{}};a=1;l={};f="waypoints-context-id";d="resize.waypoints";v="scroll.waypoints";m=1;g="waypoints-waypoint-ids";y="waypoint";b="waypoints";s=function(){function e(e){var t=this;this.$element=e;this.element=e[0];this.didResize=false;this.didScroll=false;this.id="context"+a++;this.oldScroll={x:e.scrollLeft(),y:e.scrollTop()};this.waypoints={horizontal:{},vertical:{}};e.data(f,this.id);l[this.id]=this;e.bind(v,function(){var e;if(!(t.didScroll||c)){t.didScroll=true;e=function(){t.doScroll();return t.didScroll=false};return r.setTimeout(e,n[b].settings.scrollThrottle)}});e.bind(d,function(){var e;if(!t.didResize){t.didResize=true;e=function(){n[b]("refresh");return t.didResize=false};return r.setTimeout(e,n[b].settings.resizeThrottle)}})}e.prototype.doScroll=function(){var e,t=this;e={horizontal:{newScroll:this.$element.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.$element.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};if(c&&(!e.vertical.oldScroll||!e.vertical.newScroll)){n[b]("refresh")}n.each(e,function(e,r){var i,s,o;o=[];s=r.newScroll>r.oldScroll;i=s?r.forward:r.backward;n.each(t.waypoints[e],function(e,t){var n,i;if(r.oldScroll<(n=t.offset)&&n<=r.newScroll){return o.push(t)}else if(r.newScroll<(i=t.offset)&&i<=r.oldScroll){return o.push(t)}});o.sort(function(e,t){return e.offset-t.offset});if(!s){o.reverse()}return n.each(o,function(e,t){if(t.options.continuous||e===o.length-1){return t.trigger([i])}})});return this.oldScroll={x:e.horizontal.newScroll,y:e.vertical.newScroll}};e.prototype.refresh=function(){var e,t,r,i=this;r=n.isWindow(this.element);t=this.$element.offset();this.doScroll();e={horizontal:{contextOffset:r?0:t.left,contextScroll:r?0:this.oldScroll.x,contextDimension:this.$element.width(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:r?0:t.top,contextScroll:r?0:this.oldScroll.y,contextDimension:r?n[b]("viewportHeight"):this.$element.height(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};return n.each(e,function(e,t){return n.each(i.waypoints[e],function(e,r){var i,s,o,u,a;i=r.options.offset;o=r.offset;s=n.isWindow(r.element)?0:r.$element.offset()[t.offsetProp];if(n.isFunction(i)){i=i.apply(r.element)}else if(typeof i==="string"){i=parseFloat(i);if(r.options.offset.indexOf("%")>-1){i=Math.ceil(t.contextDimension*i/100)}}r.offset=s-t.contextOffset+t.contextScroll-i;if(r.options.onlyOnScroll&&o!=null||!r.enabled){return}if(o!==null&&o<(u=t.oldScroll)&&u<=r.offset){return r.trigger([t.backward])}else if(o!==null&&o>(a=t.oldScroll)&&a>=r.offset){return r.trigger([t.forward])}else if(o===null&&t.oldScroll>=r.offset){return r.trigger([t.forward])}})})};e.prototype.checkEmpty=function(){if(n.isEmptyObject(this.waypoints.horizontal)&&n.isEmptyObject(this.waypoints.vertical)){this.$element.unbind([d,v].join(" "));return delete l[this.id]}};return e}();o=function(){function e(e,t,r){var i,s;r=n.extend({},n.fn[y].defaults,r);if(r.offset==="bottom-in-view"){r.offset=function(){var e;e=n[b]("viewportHeight");if(!n.isWindow(t.element)){e=t.$element.height()}return e-n(this).outerHeight()}}this.$element=e;this.element=e[0];this.axis=r.horizontal?"horizontal":"vertical";this.callback=r.handler;this.context=t;this.enabled=r.enabled;this.id="waypoints"+m++;this.offset=null;this.options=r;t.waypoints[this.axis][this.id]=this;u[this.axis][this.id]=this;i=(s=e.data(g))!=null?s:[];i.push(this.id);e.data(g,i)}e.prototype.trigger=function(e){if(!this.enabled){return}if(this.callback!=null){this.callback.apply(this.element,e)}if(this.options.triggerOnce){return this.destroy()}};e.prototype.disable=function(){return this.enabled=false};e.prototype.enable=function(){this.context.refresh();return this.enabled=true};e.prototype.destroy=function(){delete u[this.axis][this.id];delete this.context.waypoints[this.axis][this.id];return this.context.checkEmpty()};e.getWaypointsByElement=function(e){var t,r;r=n(e).data(g);if(!r){return[]}t=n.extend({},u.horizontal,u.vertical);return n.map(r,function(e){return t[e]})};return e}();p={init:function(e,t){var r;if(t==null){t={}}if((r=t.handler)==null){t.handler=e}this.each(function(){var e,r,i,u;e=n(this);i=(u=t.context)!=null?u:n.fn[y].defaults.context;if(!n.isWindow(i)){i=e.closest(i)}i=n(i);r=l[i.data(f)];if(!r){r=new s(i)}return new o(e,r,t)});n[b]("refresh");return this},disable:function(){return p._invoke(this,"disable")},enable:function(){return p._invoke(this,"enable")},destroy:function(){return p._invoke(this,"destroy")},prev:function(e,t){return p._traverse.call(this,e,t,function(e,t,n){if(t>0){return e.push(n[t-1])}})},next:function(e,t){return p._traverse.call(this,e,t,function(e,t,n){if(t<n.length-1){return e.push(n[t+1])}})},_traverse:function(e,t,i){var s,o;if(e==null){e="vertical"}if(t==null){t=r}o=h.aggregate(t);s=[];this.each(function(){var t;t=n.inArray(this,o[e]);return i(s,t,o[e])});return this.pushStack(s)},_invoke:function(e,t){e.each(function(){var e;e=o.getWaypointsByElement(this);return n.each(e,function(e,n){n[t]();return true})});return this}};n.fn[y]=function(){var e,r;r=arguments[0],e=2<=arguments.length?t.call(arguments,1):[];if(p[r]){return p[r].apply(this,e)}else if(n.isFunction(r)){return p.init.apply(this,arguments)}else if(n.isPlainObject(r)){return p.init.apply(this,[null,r])}else if(!r){return n.error("jQuery Waypoints needs a callback function or handler option.")}else{return n.error("The "+r+" method does not exist in jQuery Waypoints.")}};n.fn[y].defaults={context:r,continuous:true,enabled:true,horizontal:false,offset:0,triggerOnce:false};h={refresh:function(){return n.each(l,function(e,t){return t.refresh()})},viewportHeight:function(){var e;return(e=r.innerHeight)!=null?e:i.height()},aggregate:function(e){var t,r,i;t=u;if(e){t=(i=l[n(e).data(f)])!=null?i.waypoints:void 0}if(!t){return[]}r={horizontal:[],vertical:[]};n.each(r,function(e,i){n.each(t[e],function(e,t){return i.push(t)});i.sort(function(e,t){return e.offset-t.offset});r[e]=n.map(i,function(e){return e.element});return r[e]=n.unique(r[e])});return r},above:function(e){if(e==null){e=r}return h._filter(e,"vertical",function(e,t){return t.offset<=e.oldScroll.y})},below:function(e){if(e==null){e=r}return h._filter(e,"vertical",function(e,t){return t.offset>e.oldScroll.y})},left:function(e){if(e==null){e=r}return h._filter(e,"horizontal",function(e,t){return t.offset<=e.oldScroll.x})},right:function(e){if(e==null){e=r}return h._filter(e,"horizontal",function(e,t){return t.offset>e.oldScroll.x})},enable:function(){return h._invoke("enable")},disable:function(){return h._invoke("disable")},destroy:function(){return h._invoke("destroy")},extendFn:function(e,t){return p[e]=t},_invoke:function(e){var t;t=n.extend({},u.vertical,u.horizontal);return n.each(t,function(t,n){n[e]();return true})},_filter:function(e,t,r){var i,s;i=l[n(e).data(f)];if(!i){return[]}s=[];n.each(i.waypoints[t],function(e,t){if(r(i,t)){return s.push(t)}});s.sort(function(e,t){return e.offset-t.offset});return n.map(s,function(e){return e.element})}};n[b]=function(){var e,n;n=arguments[0],e=2<=arguments.length?t.call(arguments,1):[];if(h[n]){return h[n].apply(null,e)}else{return h.aggregate.call(null,n)}};n[b].settings={resizeThrottle:100,scrollThrottle:30};return i.load(function(){return n[b]("refresh")})})}).call(this)</script>
+<script type="text/javascript" src="assets/js/jsapi.js"></script>
+
+<script type="text/javascript">
+
+$(window).on('load',function(){
+	var screenHeight = $(window).height()
+	$(window).resize(function(){
+		screenHeight = $(window).height()
+	})
+
+	var animSectionHeight = 0
+	var fadeDelay
+
+	$('.animhigh').waypoint(function(direction) {
+		if ($(this).data("delay")) fadeDelay = $(this).data("delay")
+			else fadeDelay = 0
+
+			$(this).delay(fadeDelay).queue(function(){
+				$(this).addClass('animated').clearQueue();
+			});
+		},
+		{ offset: screenHeight / 4.5 }
+	)
+	$('.animmid').waypoint(function(direction) {
+		if ($(this).data("delay")) fadeDelay = $(this).data("delay")
+			else fadeDelay = 0
+
+			$(this).delay(fadeDelay).queue(function(){
+				$(this).addClass('animated').clearQueue();
+			});
+		},
+		{ offset: screenHeight / 2.4 }
+	)
+	$('.animlow').waypoint(function(direction) {
+		if ($(this).data("delay")) fadeDelay = $(this).data("delay")
+			else fadeDelay = 0
+
+			$(this).delay(fadeDelay).queue(function(){
+				$(this).addClass('animated').clearQueue();
+			});
+		},
+		{ offset: screenHeight / 1.4 }
+	)
+	$('.anim').waypoint(function(direction) {
+		if ($(this).data("delay")) fadeDelay = $(this).data("delay")
+			else fadeDelay = 0
+
+			$(this).delay(fadeDelay).queue(function(){
+				$(this).addClass('animated').clearQueue();
+			});
+		},
+		{ offset: screenHeight }
+	)
+})	// End : Window Load
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDilsvXvNravVFtHJD8gd1tpziE4Fb5UkA&callback=initMap"></script>
+<script>
+
+	var locations = [
+		['Attorni 1',41.717882,-74.5053707,7,'http://s33.postimg.org/tgzbe1dkr/attorni_01.png'],
+		['Attorni 2',41.001022,-75.1053707,6,'http://s33.postimg.org/gqv30y5mj/attorni_02.png'],
+		['Attorni 3',41.517882,-75.5053707,5,'http://s33.postimg.org/tgzbe1dkr/attorni_01.png']
+	];
+
+	var markers = [];
+	var map;
+	var infowindow;
+
+	function initMap() {
+		map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 8,
+			scrollwheel: false,
+			mapTypeControl: false,
+			center: {lat: 41.81, lng: -75.00}
+		});
+		infowindow = new google.maps.InfoWindow();
+
+		drop();
+	}
+
+
+	function drop() {
+		clearMarkers();
+		for (var i = 0; i < locations.length; i++) {
+			addMarkerWithTimeout(locations[i], i * 500);
+		}
+	}
+
+	function addMarkerWithTimeout(location, timeout) {
+		var marker;
+		window.setTimeout(function() {
+			markers.push(marker = new google.maps.Marker({
+				position: {lat: location[1], lng: location[2]},
+				map: map,
+				icon: location[4],
+				title: location[0],
+				zIndex: location[3],
+				animation: google.maps.Animation.DROP
+			}));
+
+
+			marker.addListener('click', function() {
+				infowindow.setContent(location[0]);
+				infowindow.open(map, marker);
+			});
+		}, timeout);
+
+
+	}
+
+	function clearMarkers() {
+		for (var i = 0; i < markers.length; i++) {
+			markers[i].setMap(null);
+		}
+		markers = [];
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attornify</title>
+	<script>!function(){function e(e){if(e in n)return!0;for(var t=o.length,r=e.replace(/^-/,"").replace(/^[a-z]/,function(e){return e.toUpperCase()}).replace(/([a-z])-([a-z])/g,function(e,t,r){return t+r.toUpperCase()});t--;)if(o[t]+r in n)return!0;return!1}function t(e,t,n,i){function s(e,t){try{return r.removeAttribute("style"),r.setAttribute("style",e+":"+t),r.style[e]==t}catch(n){}return!1}if(i)return s(e,t);if(s(e,t))return!0;if(n[0]!=e||n[1]!=t)for(var a=o.length;a--;)if(s(n[0]==e?e:"-"+o[a].toLowerCase()+"-"+e,n[1]==t?t:"-"+o[a].toLowerCase()+"-"+t))return!0;return!1}var r=document.createElement("div"),n=r.style,i=document.documentElement,o=["O","Moz","ms","Webkit"],s=!0,a=[["flex","box-flex"],"display:table","transform"],c=a.length,u="js "+i.className.replace(/no-js[\s]?\b/g,""),w=/*@cc_on (function(){switch(@_jscript_version){case 1.0:return 3;case 3.0:return 4;case 5.0:return 5;case 5.1:return 5;case 5.5:return 5.5;case 5.6:return 6;case 5.7:return 7;case 5.8:return 8;case 9:return 9;case 10:return 10;}})()||@*/0;u+=w?"e"+w+" ":"",u+=!window.ActiveXObject&&"ActiveXObject"in window?"e11 ":"";try{u+=CSS.supports("-ms-accelerator","true")?"ed ":""}catch(l){}u+=/constructor/i.test(window.HTMLElement)?"sf ":"",u+="MozAppearance"in i.style?"ff ":"",u+="WebkitAppearance"in i.style?"wk ":"",u+=window.chrome&&window.chrome.webstore?"crd ":"",/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream&&(u+="i"+(window.indexedDB?"s i8u ":window.SpeechSynthesisUtterance?"s i7 ":window.webkitAudioContext?"s i6 ":window.matchMedia?"s i5 ":window.history&&"pushState"in window.history?"s i4 ":"s i3b ")),u+="ontouchstart"in window?"touch ":"no-touch ";for(;c--;){var d=!1,f="";if(a[c]instanceof Array){var p=a[c].length;for(f=a[c][0];p--;)if(e(a[c][p])){d=!0;break}}else if(a[c].indexOf(":")>0){var h=a[c].split(":"),m=h[0].replace(/^-/,""),b=h[1].replace(/^-/,"");d=t(m,b,h),f=m.substring(0,3)+"-"+b}else d=e(a[c]),f=a[c];s&&(u+=d?f+" ":"no-"+f+" ")}i.className=u.replace(/\s+$/,"")}();</script>
+	<link href='//fonts.googleapis.com/css?family=Roboto:300,400,700|Signika:300,400,700|Poppins:400,700' rel='stylesheet' type='text/css'>
+	<link href="assets/css/styles.css" rel="stylesheet" media="all">
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js" media="all"></script><![endif]-->
+</head>
+<body class="resources">
+
+<header class="header enw" role="banner">
+	<div class="encase fx">
+		<a href="landing.html" class="logo fx ac fn">
+			<img src="assets/images/logo-black.png" alt="Attornify Logo">
+		</a>
+		<div class="fx jfe f1a">
+			<div>
+				<nav class="nav" role="navigation">
+					<ul class="top up fx jfe">
+						<li><a href="#">ARE YOU AN ATTORNEY?</a></li>
+						<li>
+							<a class="modalOpener" id="modalOpenerSignup" href="#">SIGN UP</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Register</div>
+										<div class="help">Already a member? <a class="link switchTo" data-switchto="login" href="#">Log In</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="signin">
+							Already a member? <a class="modalOpener" id="modalOpenerSignin" href="#">SIGN IN</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Login to Attornify</div>
+										<div class="help">Not a member yet? <a class="link switchTo" data-switchto="signup" href="#">Register Now</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<nav class="nav" role="navigation">
+					<ul class="top down fx jfe">
+						<li class="active">
+							<a href="#">FIND AN ATTORNEY</a>
+						</li>
+						<li><a href="#">HOW IT WORKS</a></li>
+						<li><a href="#">RESOURCES</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="banner-sub enw">
+	<div class="map-violet-outer">
+		<div class="encase">
+			<div class="map-violet-inner fx ac nu jsb">
+				<div class="ff-sg">
+					<div class="bread">Home <span class="rarrow"></span></div>
+					<div class="lead">Resources</div>
+				</div>
+				<a class="btn confirm uc splash banner-btn" href="#0">REQUEST A RESOURCE</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="encase">
+	<div class="subc">
+		<div class="topcopy">
+			<h1 class="hd1">Legal Resources and Articles</h1>
+			<div class="helper">You Can Put to Use Now!</div>
+			<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+		</div>
+		<div class="content bgw pr">
+			<div class="bgtop"><div class="angle"></div></div>
+			<div class="pr">
+				<div class="content-resources">
+					<h3 class="content-head ff-sg">FEATURED RESOURCES</h3>
+					<div class="enfold fx jsa">
+						<div class="resource box double split fxn">
+							<div class="left fxc afs">
+								<div class="tag uc">FREE ATTORNIFY EBOOK</div>
+								<h3 class="h3">Choosing the Right Attorney</h3>
+								<p class="p">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								<a class="btn confirm mta uc nu" href="#0">Download Now</a>
+							</div>
+							<div class="right f1 pr">
+								<img class="resimg pa" src="assets/images/resource-article-right-image.jpg" alt="">
+							</div>
+							<div class="flyover-links fxn">
+								<a class="link" href="#0"></a>
+								<a class="link favorite" href="#0"></a>
+							</div>
+						</div>
+						<div class="resource box single yellow padd pr fxc">
+							<div class="bgtop"><div class="angle bgcolor"></div></div>
+							<div class="pr">
+								<div class="fxc afs">
+									<div class="tag uc nobg">FEATURED ARTICLE</div>
+									<h3 class="h3">The case for formal estate planning!</h3>
+									<p class="p">And why most people get into trouble with this.</p>
+								</div>
+							</div>
+							<div class="articleby pr mta">
+								Neville Billimoria
+								<div class="sml">December 23, 2015</div>
+							</div>
+							<div class="flyover-links fxn">
+								<a class="link" href="#0"></a>
+								<a class="link favorite" href="#0"></a>
+							</div>
+						</div>
+						<div class="resource box single bgimg nopadd pr fxc">
+							<div class="bgtop"><img src="assets/images/bg-img-resource-single.jpg" alt=""></div>
+							<div class="pr">
+								<a class="fxc afs linkbgimg padd" href="#">
+									<div class="tag uc">FEATURED ARTICLE</div>
+								</a>
+								<h3 class="h3 paddx">The case for formal estate planning!</h3>
+							</div>
+							<div class="articleby pr mta paddx">
+								Neville Billimoria
+								<div class="sml">December 23, 2015</div>
+							</div>
+							<div class="flyover-links fxn">
+								<a class="link" href="#0"></a>
+								<a class="link favorite" href="#0"></a>
+							</div>
+						</div>
+						<div class="resource box single fullbg yellow-green copywhite nopadd pr fxc">
+							<div class="bgtop bgcolor"></div>
+							<div class="pr padd">
+								<div class="tag uc nobg">FEATURED ARTICLE</div>
+								<h3 class="h3">Prosecuting Identity Theft and Online Fraud Cases: A Primer</h3>
+								<div class="articleby pr">
+									Neville Billimoria
+									<div class="sml">December 23, 2015</div>
+								</div>
+							</div>
+							<div class="pr mta fx">
+								<a class="btn confirm uc nu" href="#0">Read Article</a>
+							</div>
+							<div class="flyover-links fxn">
+								<a class="link" href="#0"></a>
+								<a class="link favorite" href="#0"></a>
+							</div>
+						</div>
+						<div class="resource box double fullbg split fxn">
+							<div class="bgtop"><img src="assets/images/bg-img-resource-double.jpg" alt=""></div>
+							<div class="left fxc afs pr">
+								<div class="tag uc nobg">FREE ATTORNIFY EBOOK</div>
+								<h3 class="h3">Get Your Taxes Right.</h3>
+								<p class="p">The right legal advice from qualified professionals can save you a ton of time when it comes to getting your taxes right! </p>
+								<div class="articleby pr">
+									Neville Billimoria
+									<div class="sml">December 23, 2015</div>
+								</div>
+								<a class="btn confirm mta uc nu" href="#0">Read Article</a>
+							</div>
+							<div class="flyover-links fxn">
+								<a class="link" href="#0"></a>
+								<a class="link favorite" href="#0"></a>
+							</div>
+						</div>
+						<div class="resource box single blue padd pr fxc">
+							<div class="bgtop"><div class="angle bgcolor"></div></div>
+							<div class="pr">
+								<div class="fxc afs">
+									<div class="tag uc nobg">FEATURED ARTICLE</div>
+									<h3 class="h3 white">Prosecuting Identity Theft and Online Fraud Cases: A Primer</h3>
+								</div>
+							</div>
+							<div class="articleby pr mta">
+								Neville Billimoria
+								<div class="sml">December 23, 2015</div>
+							</div>
+							<div class="flyover-links fxn">
+								<a class="link" href="#0"></a>
+								<a class="link favorite" href="#0"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="more-res">
+					<div class="enfold">
+						<div class="bordertop"></div>
+						<div class="fxn">
+							<div class="sidebar">
+								<h4 class="barhead uc">More Resources</h4>
+								<div class="widget">
+									<div class="topsearch">
+										<div class='searchfold fxn'>
+											<input class="input f1" type="text" name="" value="" placeholder="Search for a category">
+											<button class="btn submit"></button>
+										</div>
+									</div>
+									<div class="category">
+										<div class="cat-head">Most popular</div>
+										<ul class="nav fxc">
+											<li class="li"><a href="#0">Administrative/regulatory law</a></li>
+											<li class="li"><a href="#0">admiralty / maritime law</a></li>
+											<li class="li"><a href="#0">advertising law</a></li>
+											<li class="li"><a href="#0">anti-trust law</a></li>
+											<li class="li"><a href="#0">arbitration</a></li>
+											<li class="li"><a href="#0">apellate practice </a></li>
+										</ul>
+									</div>
+									<div class="category">
+										<div class="cat-head">all categories</div>
+										<ul class="nav fx all">
+											<li class="li"><a href="#0">A - D</a></li>
+											<li class="li"><a href="#0">E - j</a></li>
+											<li class="li"><a href="#0">k - p</a></li>
+											<li class="li"><a href="#0">q -  w</a></li>
+											<li class="li"><a href="#0">x - z </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="right f1 fxc">
+								<ul class="nav fx uc filter nu">
+									<li class="li active"><a class="a" href="#0">Recent</a></li>
+									<li class="li"><a class="a" href="#0">TOP RATED</a></li>
+									<li class="li"><a class="a" href="#0">TEMPLATES</a></li>
+									<li class="li"><a class="a" href="#0">ADVICE</a></li>
+								</ul>
+								<div class="res-listing">
+									<div class="listing-head">Showing Resources 1 through <strong>50</strong> of <strong>3422</strong> total resources</div>
+									<div class="listings fxc">
+										<div class="listing fx afs">
+											<div class="copy f1">
+												<a class="lead" href="#0">Prosecuting identity theft and online fraud: a primer</a>
+												<div class="fx">
+													December 23, 2015 -
+													<a class="by" href="#0">Neville Billimoria</a>
+												</div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+												<div class="fx">
+													<a class="linksocial" href="#0">Like</a>
+													<a class="linksocial share" href="#0">Share</a>
+												</div>
+											</div>
+										</div>
+										<div class="listing fx afs">
+											<div class="copy f1">
+												<a class="lead" href="#0">Prosecuting identity theft and online fraud: a primer</a>
+												<div class="fx">
+													Video - 2:21 <span class="bar">|</span>December 23, 2015 -
+													<a class="by" href="#0">Neville Billimoria</a>
+												</div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ...</p>
+												<div class="fx">
+													<a class="linksocial" href="#0">Like</a>
+													<a class="linksocial share" href="#0">Share</a>
+												</div>
+											</div>
+											<a class="media fx" href="#0"><img src="assets/images/resource-media.png" alt=""></a>
+										</div>
+										<div class="listing fx afs">
+											<div class="copy f1">
+												<a class="lead" href="#0">Prosecuting identity theft and online fraud: a primer</a>
+												<div class="fx">
+													December 23, 2015 -
+													<a class="by" href="#0">Neville Billimoria</a>
+												</div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+												<div class="fx">
+													<a class="linksocial" href="#0">Like</a>
+													<a class="linksocial share" href="#0">Share</a>
+												</div>
+											</div>
+										</div>
+										<div class="listing fx afs">
+											<div class="copy f1">
+												<a class="lead" href="#0">Prosecuting identity theft and online fraud: a primer</a>
+												<div class="fx">
+													December 23, 2015 -
+													<a class="by" href="#0">Neville Billimoria</a>
+												</div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+												<div class="fx">
+													<a class="linksocial" href="#0">Like</a>
+													<a class="linksocial share" href="#0">Share</a>
+												</div>
+											</div>
+										</div>
+										<div class="listing fx afs">
+											<div class="copy f1">
+												<a class="lead" href="#0">Prosecuting identity theft and online fraud: a primer</a>
+												<div class="fx">
+													December 23, 2015 -
+													<a class="by" href="#0">Neville Billimoria</a>
+												</div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+												<div class="fx">
+													<a class="linksocial" href="#0">Like</a>
+													<a class="linksocial share" href="#0">Share</a>
+												</div>
+											</div>
+										</div>
+										<div class="listing fx afs">
+											<div class="copy f1">
+												<a class="lead" href="#0">Prosecuting identity theft and online fraud: a primer</a>
+												<div class="fx">
+													December 23, 2015 -
+													<a class="by" href="#0">Neville Billimoria</a>
+												</div>
+												<p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...</p>
+												<div class="fx">
+													<a class="linksocial" href="#0">Like</a>
+													<a class="linksocial share" href="#0">Share</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="fx">
+										<div class="loadmore">Load More Articles...</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer class="footer enw">
+	<div class="top pr">
+		<div class="encase">
+			<div class="fxc ajc">
+				<a class="foot-logo" href="#"><img src="assets/images/logo-footer.png" alt="Attornify"></a>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+			</div>
+			<div class="tweet bgw">
+				<div class="fxc ajc">
+				<div class="uc">Voices</div>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+				<div class="who"><span class="tuser">@ronnyIBM6</span> minutes ago</div>
+				</div>
+			</div>
+			<div class="comment fxc ac">
+				<div class="lead">Have a comment, question, or, want to share something with us?</div>
+				<div class="options cfx">
+					<div class="opt op1"><a class="mt5" href="#">Feedback or Questions?</a></div>
+					<div class="opt op2"><a class="mt5" href="#">Report a Concern</a></div>
+					<div class="opt op3"><a class="mt5" href="#">Support Helpdesk</a></div>
+					<div class="opt op4"><a class="mt5" href="tel:1-800-243-2234">Priority Support<br>1-800-243-2234</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom pr">
+		<div class="encase">
+			<div class="links bgw pr cfxn">
+				<div class="left">
+					<div class="col3">
+						<div class="lead">About</div>
+						<ul class="nav">
+							<li><a href="#">Our Company</a></li>
+							<li><a href="#">Executive Team</a></li>
+							<li><a href="#">Awards &amp; Recognition</a></li>
+							<li><a href="#">Investor Relations</a></li>
+							<li><a href="#">Press Center</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col3">
+						<div class="lead">FOR USERS</div>
+						<ul class="nav">
+							<li><a href="#">How It Works</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Customer Support</a></li>
+						</ul>
+					</div>
+					<div class="col3">
+						<div class="lead">FOR ATTORNEYS</div>
+						<ul class="nav">
+							<li><a href="#">List Your Practice</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Content Submissions</a></li>
+							<li><a href="#">Managing Your Profile</a></li>
+							<li><a href="#">Priority Support</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right f1a fxc">
+					<div class="lead">STAY IN TOUCH</div>
+					<div class="subscribe">Subscribe to our newsletter...</div>
+					<input class="inputsubscribe" type="text" name="subscribe" value="" placeholder="Your email address">
+					<div class="social fx">
+						<a class="icon fbook" href="#"></a>
+						<a class="icon twter" href="#"></a>
+						<a class="icon linked" href="#"></a>
+						<a class="icon tube" href="#"></a>
+						<a class="icon goog" href="#"></a>
+					</div>
+				</div>
+			</div>
+			<div class="copyright fx jsb">
+				<div class="left">©2016 <a href="#">ATTORNIFY</a>, LLP. All Rights Reserved.</div>
+				<ul class="nav fx">
+					<li><a href="#">PRIVACY POLICY</a></li>
+					<li>|</li>
+					<li><a href="#">TERMS OF USE</a></li>
+					<li>|</li>
+					<li><a href="#">INFORMATION SECURITY</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="mOverlay pf" id="modalOverlay"></div>
+<div class="modal pf">
+<div class="encase">
+	<div class="modalenfold pr fxn jc afs">
+		<div id="modalContent" class="pr">
+		</div>
+		<div id="btnModalClose" class="pa"></div>
+	</div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jsapi.js"></script>
+
+</body>
+</html>

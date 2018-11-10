@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Attornify</title>
+	<script>!function(){function e(e){if(e in n)return!0;for(var t=o.length,r=e.replace(/^-/,"").replace(/^[a-z]/,function(e){return e.toUpperCase()}).replace(/([a-z])-([a-z])/g,function(e,t,r){return t+r.toUpperCase()});t--;)if(o[t]+r in n)return!0;return!1}function t(e,t,n,i){function s(e,t){try{return r.removeAttribute("style"),r.setAttribute("style",e+":"+t),r.style[e]==t}catch(n){}return!1}if(i)return s(e,t);if(s(e,t))return!0;if(n[0]!=e||n[1]!=t)for(var a=o.length;a--;)if(s(n[0]==e?e:"-"+o[a].toLowerCase()+"-"+e,n[1]==t?t:"-"+o[a].toLowerCase()+"-"+t))return!0;return!1}var r=document.createElement("div"),n=r.style,i=document.documentElement,o=["O","Moz","ms","Webkit"],s=!0,a=[["flex","box-flex"],"display:table","transform"],c=a.length,u="js "+i.className.replace(/no-js[\s]?\b/g,""),w=/*@cc_on (function(){switch(@_jscript_version){case 1.0:return 3;case 3.0:return 4;case 5.0:return 5;case 5.1:return 5;case 5.5:return 5.5;case 5.6:return 6;case 5.7:return 7;case 5.8:return 8;case 9:return 9;case 10:return 10;}})()||@*/0;u+=w?"e"+w+" ":"",u+=!window.ActiveXObject&&"ActiveXObject"in window?"e11 ":"";try{u+=CSS.supports("-ms-accelerator","true")?"ed ":""}catch(l){}u+=/constructor/i.test(window.HTMLElement)?"sf ":"",u+="MozAppearance"in i.style?"ff ":"",u+="WebkitAppearance"in i.style?"wk ":"",u+=window.chrome&&window.chrome.webstore?"crd ":"",/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream&&(u+="i"+(window.indexedDB?"s i8u ":window.SpeechSynthesisUtterance?"s i7 ":window.webkitAudioContext?"s i6 ":window.matchMedia?"s i5 ":window.history&&"pushState"in window.history?"s i4 ":"s i3b ")),u+="ontouchstart"in window?"touch ":"no-touch ";for(;c--;){var d=!1,f="";if(a[c]instanceof Array){var p=a[c].length;for(f=a[c][0];p--;)if(e(a[c][p])){d=!0;break}}else if(a[c].indexOf(":")>0){var h=a[c].split(":"),m=h[0].replace(/^-/,""),b=h[1].replace(/^-/,"");d=t(m,b,h),f=m.substring(0,3)+"-"+b}else d=e(a[c]),f=a[c];s&&(u+=d?f+" ":"no-"+f+" ")}i.className=u.replace(/\s+$/,"")}();</script>
+	<link href='//fonts.googleapis.com/css?family=Roboto:300,400,700|Signika:300,400,700|Poppins:400,700' rel='stylesheet' type='text/css'>
+	<link href="assets/css/styles.css" rel="stylesheet" media="all">
+	<!--[if lt IE 9]><script src="assets/js/html5shiv.min.js" media="all"></script><![endif]-->
+</head>
+<body class="aboutus">
+
+<header class="header enw" role="banner">
+	<div class="encase fx">
+		<a href="landing.html" class="logo fx ac fn">
+			<img src="assets/images/logo-black.png" alt="Attornify Logo">
+		</a>
+		<div class="fx jfe f1a">
+			<div>
+				<nav class="nav" role="navigation">
+					<ul class="top up fx jfe">
+						<li><a href="#">ARE YOU AN ATTORNEY?</a></li>
+						<li>
+							<a class="modalOpener" id="modalOpenerSignup" href="#">SIGN UP</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Register</div>
+										<div class="help">Already a member? <a class="link switchTo" data-switchto="login" href="#">Log In</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="signin">
+							Already a member? <a class="modalOpener" id="modalOpenerSignin" href="#">SIGN IN</a>
+							<div class="modCont dn">
+								<div class="logReg">
+									<div class="topSleeve fx ac">
+										<div class="lead ff-sg">Login to Attornify</div>
+										<div class="help">Not a member yet? <a class="link switchTo" data-switchto="signup" href="#">Register Now</a></div>
+									</div>
+									<div class="mBody fx">
+										<div class="left f1">
+											<div class="form">
+												<form action="#">
+													<div class="fold">
+														<label class="db">Username</label>
+														<input class="input" type="text" name="username" value="">
+													</div>
+													<div class="fold">
+														<label class="db">Password</label>
+														<div class="fx col ac">
+															<input class="input" type="password" name="password" value="">
+															<a href="#"><small>Forgot Password?</small></a>
+														</div>
+													</div>
+													<div class="fold fx">
+														<label class="cstCBx fx ac fn">
+															<input type="checkbox" name="rememberlogin" value=""><span></span><small>Remember my Login Information</small>
+														</label>
+													</div>
+													<div class="col"><button class="btn uc">Login</button></div>
+												</form>
+											</div>
+										</div>
+										<div class="sidebar nu">
+											<div class="lead ff-sg">Social Login</div>
+											<a class="fx ac fbok" href="#">LOGIN With FACEBOOK</a>
+											<a class="fx ac twtr" href="#">LOGIN With TWITTER</a>
+											<a class="fx ac goog" href="#">LOGIN With GOOGLE</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<nav class="nav" role="navigation">
+					<ul class="top down fx jfe">
+						<li class="active">
+							<a href="#">FIND AN ATTORNEY</a>
+						</li>
+						<li><a href="#">HOW IT WORKS</a></li>
+						<li><a href="#">RESOURCES</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="banner-sub enw">
+	<div class="map-violet-outer">
+		<div class="encase">
+			<div class="map-violet-inner fx ac nu">
+				<div class="ff-sg">
+					<div class="bread">Home <span class="rarrow"></span></div>
+					<div class="lead">Attorney Profile</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="encase">
+	<div class="subc">
+		<div class="topshare fx jfe">
+			<div class="share fx ac">
+				<div class="socialc">
+					<div class="social cfxn">
+						<a class="item fbk" href="#0"></a>
+						<a class="item gog" href="#0"></a>
+						<a class="item twt" href="#0"></a>
+						<a class="item lin" href="#0"></a>
+						<a class="item eml" href="#0"></a>
+						<a class="item url" href="#0"></a>
+					</div>
+				</div>
+				<div class="share"></div>
+			</div>
+			<a class="share favorite" id="topsharefavorite" href="#0"></a>
+		</div>
+		<div class="content bgw pr">
+			<div class="bgtop"><div class="angle"></div></div>
+			<div class="pr">
+				<div class="aboutc-top fxn">
+					<div class="content-left">
+						<div class="fold fxc afs">
+							<div class="lead-tag uc">Our Team</div>
+							<h1 class="hd1">An organisation is only as strong as it’s team!</h1>
+							<p class="top-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<div class="about-people fxn cf1">
+								<div class="attorney fxc afs">
+									<div class="fig"><img class="db" src="assets/images/about-attorney.jpg" alt="Name of attorney.."></div>
+									<div class="ff-sg">Neville Billimoria</div>
+									<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+								</div>
+								<div class="attorney fxc afs">
+									<div class="fig"><img class="db" src="assets/images/about-attorney.jpg" alt="Name of attorney.."></div>
+									<div class="ff-sg">Neville Billimoria</div>
+									<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+								</div>
+								<div class="attorney fxc afs">
+									<div class="fig"><img class="db" src="assets/images/about-attorney.jpg" alt="Name of attorney.."></div>
+									<div class="ff-sg">Neville Billimoria</div>
+									<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<aside class="aside f1a">
+						<div class="about-contact-widget bgw">
+							<h4 class="h4">Get In Touch...</h4>
+							<form action="#0" class="fxc afs">
+								<input class="input" type="text" name="name" value="" placeholder="Your Name" required>
+								<input class="input" type="text" name="name" value="" placeholder="Email Address" required>
+								<input class="input" type="text" name="name" value="" placeholder="Phone Number" required>
+								<a class="add-comment" href="#0">Add a Comment?</a>
+								<button class="btn splash">Request Contact</button>
+							</form>
+						</div>
+					</aside>
+				</div>
+				<div class="about-bottom fxn">
+					<div class="content-left">
+						<div class="fold">
+							<h4 class="h4 ff-sg">Newsroom</h4>
+							<p class="p">All that you want to know about Attornify and how we’re rocking the boat is right here! Watch the videos, read our news coverage, download our Press Kit, or just get in touch if you want to know more about anything!</p>
+						</div>
+						<div class="fold">
+							<div class="recent-media ff-sg">Recent Media Appearances</div>
+							<div class="video-player fx">
+								<img src="assets/images/about-video-player.jpg" alt="">
+							</div>
+							<div class="video-thumbs fx afs jsb" id="videoThumbs">
+								<div class="item fxc">
+									<div class="thumb fx"><img class="fit" src="assets/images/about-video-thumb.jpg" alt=""></div>
+									<div class="ff-pp">How not to fall into a trap with legal services<span class="video-length">4:23</span></div>
+								</div>
+								<div class="item">
+									<div class="thumb fx"><img class="fit" src="assets/images/about-video-thumb.jpg" alt=""></div>
+									<div class="ff-pp">How not to fall into a trap with legal services<span class="video-length">4:23</span></div>
+								</div>
+								<div class="item">
+									<div class="thumb fx"><img class="fit" src="assets/images/about-video-thumb.jpg" alt=""></div>
+									<div class="ff-pp">How not to fall into a trap with legal services<span class="video-length">4:23</span></div>
+								</div>
+							</div>
+							<div class="load-more-videos fxm">
+								<div class="loadmore"  data-url="ajax-loaders/ajax-load-more-videos.html" data-container="#videoThumbs">Load More Videos..</div>
+							</div>
+						</div>
+					</div>
+					<aside class="aside f1 about-bottom-right">
+						<div class="requestmedia">Request Our Media Kit</div>
+						<div class="padd inthenews">
+							<h4 class="head">In The News</h4>
+							<p class="p">We know we’re not going to sound modest, but then, we can’t help with the kind of coverage we’re receiving in global media. Read up, and tell us if we’re justified in being a bit cocky :)</p>
+						</div>
+						<div class="padd border">
+							<h4 class="head"><img src="assets/images/about-logo-fortune.png" alt="Fortune"></h4>
+							<p>Attornify is shatking things up in online legal services space. And how!</p>
+							<div class="dated">May 6, 2016</div>
+						</div>
+						<div class="padd border">
+							<h4 class="head"><img src="assets/images/about-logo-forbes.png" alt="Forbes"></h4>
+							<p>Attornify is shatking things up in online legal services space. And how!</p>
+							<div class="dated">May 6, 2016</div>
+						</div>
+						<div class="padd border">
+							<h4 class="head"><img src="assets/images/about-logo-inc.png" alt="Inc Magazine"></h4>
+							<p>Attornify is shatking things up in online legal services space. And how!</p>
+							<div class="dated">May 6, 2016</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer class="footer enw">
+	<div class="top pr">
+		<div class="encase">
+			<div class="fxc ajc">
+				<a class="foot-logo" href="#"><img src="assets/images/logo-footer.png" alt="Attornify"></a>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+			</div>
+			<div class="tweet bgw">
+				<div class="fxc ajc">
+				<div class="uc">Voices</div>
+				<p class="foot-p tac">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. consequat.</p>
+				<div class="who"><span class="tuser">@ronnyIBM6</span> minutes ago</div>
+				</div>
+			</div>
+			<div class="comment fxc ac">
+				<div class="lead">Have a comment, question, or, want to share something with us?</div>
+				<div class="options cfx">
+					<div class="opt op1"><a class="mt5" href="#">Feedback or Questions?</a></div>
+					<div class="opt op2"><a class="mt5" href="#">Report a Concern</a></div>
+					<div class="opt op3"><a class="mt5" href="#">Support Helpdesk</a></div>
+					<div class="opt op4"><a class="mt5" href="tel:1-800-243-2234">Priority Support<br>1-800-243-2234</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom pr">
+		<div class="encase">
+			<div class="links bgw pr cfxn">
+				<div class="left">
+					<div class="col3">
+						<div class="lead">About</div>
+						<ul class="nav">
+							<li><a href="#">Our Company</a></li>
+							<li><a href="#">Executive Team</a></li>
+							<li><a href="#">Awards &amp; Recognition</a></li>
+							<li><a href="#">Investor Relations</a></li>
+							<li><a href="#">Press Center</a></li>
+							<li><a href="#">Contacts</a></li>
+						</ul>
+					</div>
+					<div class="col3">
+						<div class="lead">FOR USERS</div>
+						<ul class="nav">
+							<li><a href="#">How It Works</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Customer Support</a></li>
+						</ul>
+					</div>
+					<div class="col3">
+						<div class="lead">FOR ATTORNEYS</div>
+						<ul class="nav">
+							<li><a href="#">List Your Practice</a></li>
+							<li><a href="#">Frequently-Asked Questions</a></li>
+							<li><a href="#">Content Submissions</a></li>
+							<li><a href="#">Managing Your Profile</a></li>
+							<li><a href="#">Priority Support</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right f1a fxc">
+					<div class="lead">STAY IN TOUCH</div>
+					<div class="subscribe">Subscribe to our newsletter...</div>
+					<input class="inputsubscribe" type="text" name="subscribe" value="" placeholder="Your email address">
+					<div class="social fx">
+						<a class="icon fbook" href="#"></a>
+						<a class="icon twter" href="#"></a>
+						<a class="icon linked" href="#"></a>
+						<a class="icon tube" href="#"></a>
+						<a class="icon goog" href="#"></a>
+					</div>
+				</div>
+			</div>
+			<div class="copyright fx jsb">
+				<div class="left">©2016 <a href="#">ATTORNIFY</a>, LLP. All Rights Reserved.</div>
+				<ul class="nav fx">
+					<li><a href="#">PRIVACY POLICY</a></li>
+					<li>|</li>
+					<li><a href="#">TERMS OF USE</a></li>
+					<li>|</li>
+					<li><a href="#">INFORMATION SECURITY</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="mOverlay pf" id="modalOverlay"></div>
+<div class="modal pf">
+<div class="encase">
+	<div class="modalenfold pr fxn jc afs">
+		<div id="modalContent" class="pr">
+		</div>
+		<div id="btnModalClose" class="pa"></div>
+	</div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/jsapi.js"></script>
+
+<script type="text/javascript">
+	$('#topsharefavorite').click(function(){
+		$(this).addClass('active');
+	})
+</script>
+
+</body>
+</html>

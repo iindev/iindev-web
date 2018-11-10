@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mobiusApp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/libs.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body ng-cloak ng-controller="MembersCtrl">
+	<div layout="column" layout-fill class="main-layout">
+
+		<header class="header df aic fn">
+			<a href="#" class="logo">m&ouml;bius</a>
+
+			<div class="db-account mla df aic">
+				<div class="db-user-info dfm" hide show-gt-sm>
+					<div class="db-portrait circle df fn"><img src="assets/images/user-profile-img.jpg" alt="STEVE SWAIM"></div>
+					<div class="db-user-name uc">Steve SWAIM</div>
+				</div>
+				<div class="icon-dd" ng-click="ddownState = !ddownState"></div>
+			</div>
+
+			<div class="db-ddown uc pa" ng-show="ddownState">
+				<div class="db-user-info df aic" hide-gt-sm>
+					<div class="db-portrait circle df fn"><img src="assets/images/user-profile-img.jpg" alt="STEVE SWAIM"></div>
+					<div class="db-user-name uc">Steve SWAIM</div>
+				</div>
+				<div class="subw dfc">
+					<a href="#" class="item df profile">
+						<div class="copy f1">Profile</div>
+						<div class="icon"></div>
+					</a>
+					<a href="#" class="item df settings">
+						<div class="copy f1">Settings</div>
+						<div class="icon"></div>
+					</a>
+					<a href="#" class="item df sign-out">
+						<div class="copy f1">Sign Out</div>
+						<div class="icon"></div>
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<section class="db-content df bb pr">
+			<div class="db-leftsidebar pr dfc" flex flex-gt-sm="none">
+				<div class="db-left-sidebar-content pr f1 dfc">
+					<div class="head uc fn df aic pl">RECENT Files</div>
+					<div class="items customScrollbar vertical">
+						<a href="#" class="item pl dfc jcc active">
+							<div class="tfold df">
+								<div class="title">Dashboard UI/UX</div>
+								<div class="icon eye f1"></div>
+							</div>
+							<div class="info uc">Last Modified: 2 HOURS AGO</div>
+						</a>
+						<a href="#" class="item pl dfc jcc">
+							<div class="tfold df">
+								<div class="title">NL Ad Campaign Ideas</div>
+								<div class="icon pencil f1"></div>
+							</div>
+							<div class="info uc">Last Modified: 7 HOURS AGO</div>
+						</a>
+						<a href="#" class="item pl dfc jcc">
+							<div class="tfold df">
+								<div class="title">Payment Process</div>
+								<div class="icon pencil f1"></div>
+							</div>
+							<div class="info uc">Last Modified: 08/25/16</div>
+						</a>
+						<a href="#" class="item pl dfc jcc">
+							<div class="tfold df">
+								<div class="title">TIA Naming Brainstorm</div>
+								<div class="icon eye f1"></div>
+							</div>
+							<div class="info uc">Last Modified: 06/10/16</div>
+						</a>
+						<a href="#" class="item pl dfc jcc">
+							<div class="tfold df">
+								<div class="title">Activation Overview 010</div>
+								<div class="icon pencil f1"></div>
+							</div>
+							<div class="info uc">Last Modified: 05/30/16</div>
+						</a>
+						<a href="#" class="item pl dfc jcc">
+							<div class="tfold df">
+								<div class="title">Login Userflow 212</div>
+								<div class="icon eye f1"></div>
+							</div>
+							<div class="info uc">Last Modified: 12/07/15</div>
+						</a>
+					</div>
+				</div>
+				<div class="new-canvas dfm">
+					<a href="#" class="canvas-btn dfm uc bb">New Canvas<span class="plus">+</span></a>
+				</div>
+			</div>
+
+			<div class="right-content f1 bb dfc" hide show-gt-sm>
+				<div class="head ff2 uc dfc fn">
+					<h2 class="head-h2">Dashboard UI/UX</h2>
+					<div class="df">
+						<div class="owner">Owner - TYLER ACKELBEIN</div>
+						<div class="info eye">VIEW Only</div>
+					</div>
+				</div>
+				<div class="canvas-container f1">
+					<!-- Your canvas should go here -->
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script src="assets/js/libs-pack.js"></script>
+	<script src="assets/js/app-members.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mobiusApp">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/libs.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body ng-cloak ng-controller="logregCtrl">
+	<div layout="column" layout-fill>
+		<div flex="noshrink" layout="column" layout-gt-sm="row">
+			<div flex="none" flex-gt-sm="50" layout="column" layout-align="center" class="block-slider">
+				<div class="content" layout="column">
+					<div class="logo">m&ouml;bius</div>
+					<div ng-carousel ng-carousel-name="logregc" class="n">
+							<slidecontainer class="carousel-slides">
+									<slide class="carousel-slide">
+										<h3 class="slide-heading">Collaborate with others anytime, anywhere.</h3>
+										<p class="slide-p">Collaborating with your team shouldn’t be hard nor limited to one space. Now, take your team and your whiteboard everywhere you go.</p>
+									</slide>
+									<slide class="carousel-slide">
+										<h3 class="slide-heading">Slide 2</h3>
+										<p class="slide-p">Collaborating with your team shouldn’t be hard no class="slide-p"r limited to one space. Now, take your team and your whiteboard everywhere you go.</p>
+									</slide>
+									<slide class="carousel-slide">
+										<h3 class="slide-heading">Slide 3</h3>
+										<p class="slide-p">Collaborating with your team shouldn’t be hard no class="slide-p"r limited to one space. Now, take your team and your whiteboard everywhere you go.</p>
+									</slide>
+							</slidecontainer>
+					</div>
+					<div layout layout-align="center" class="carousel-pagi">
+						<div class="pagi" ng-class="{'active' : 0 ==	Carousel.get('logregc').currentSlide }" ng-click="Carousel.get('logregc').toIndex(0)"></div>
+						<div class="pagi" ng-class="{'active' : 1 ==	Carousel.get('logregc').currentSlide }" ng-click="Carousel.get('logregc').toIndex(1)"></div>
+						<div class="pagi" ng-class="{'active' : 2 ==	Carousel.get('logregc').currentSlide }" ng-click="Carousel.get('logregc').toIndex(2)"></div>
+					</div>
+				</div>
+			</div>
+			<div flex="none" flex-gt-sm="50" layout="column" layout-align="center" class="block-log-reg">
+				<div class="wrapper">
+					<div layout="row" layout-align="center">
+						<md-button class="login tab  logregBtn" ng-class="{active : 'login' == activeTab}" ng-click="setTab('login')">Login</md-button>
+						<md-button class="register tab logregBtn" ng-class="{active : 'register' == activeTab}" ng-click="setTab('register')">Register</md-button>
+					</div>
+					<div class="tab-content">
+						<div class="tabc login" ng-show="activeTab == 'login'">
+							<form class="logform" layout="column" name="logform" action="#">
+								<md-input-container class="" flex="none">
+									<label>Username</label>
+									<input required ng-model="member.username">
+								</md-input-container>
+								<md-input-container class="" flex="none">
+									<label>Password</label>
+									<input required ng-model="member.password" type="password">
+								</md-input-container>
+								<md-button type="submit" class="btn-submit logregBtn">Submit</md-button>
+								<div layout="row" layout-align="center center" class="loginforget">
+									<a href="#">Forget?</a>
+								</div>
+							</form>
+						</div>
+						<div class="tabc register" ng-show="activeTab == 'register'">
+							<form class="regform" layout="column" name="regform" action="#">
+								<div class="addphoto" layout layout-align="center center">
+									<a href="#">+ Add Photo</a>
+								</div>
+								<div layout="row" layout-wrap layout-align="space-around">
+									<md-input-container class="" flex="none">
+										<label>First Name</label>
+										<input required ng-model="user.firstName">
+									</md-input-container>
+									<md-input-container class="" flex="none">
+										<label>Last Name</label>
+										<input required ng-model="user.lastName">
+									</md-input-container>
+									<md-input-container class="" flex="none">
+										<label>Email Address</label>
+										<input type="email" required ng-model="user.email">
+									</md-input-container>
+									<md-input-container class="" flex="none">
+										<label>ORGANIZATION/COMPANY</label>
+										<input required ng-model="user.company">
+									</md-input-container>
+									<md-input-container class="" flex="none">
+										<label>Password</label>
+										<input required ng-model="user.password" type="password">
+									</md-input-container>
+									<md-input-container class="" flex="none">
+										<label>Confirm Password</label>
+										<input required ng-model="user.confirmpassword" type="password">
+									</md-input-container>
+								</div>
+								<md-button type="submit" class="btn-submit logregBtn">Submit</md-button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div flex="none" class="footer" layout="row" layout-align="center center">&copy; Newline 2016</div>
+	</div>
+
+	<script src="assets/js/libs-pack.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+!function(){angular.module("mobiusApp",["ngMaterial","angular-carousel"]).config(["$mdThemingProvider",function(e){e.disableTheming()}])}(),function(){angular.module("mobiusApp").controller("logregCtrl",["$scope","Carousel",function(e,n){e.Carousel=n,e.activeTab="register",e.setTab=function(n){e.activeTab=n}}])}();

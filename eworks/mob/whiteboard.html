@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mobiusApp" ng-controller="WhiteBoardCtrl" ng-style="{'font-size': dfsz +'px'}">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/libs.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body ng-cloak>
+	<div class="tb hf">
+		<section class="wb-lbar tc bb hf">
+			<div class="dfc hf">
+				<div class="stack head">
+					<div ng-attr-contenteditable="{{ editable1 }}" ng-click="editable1 = true" ng-blur="editable1 = false">Class Brainstorm</div>
+					<div ng-attr-contenteditable="{{ editable2 }}" ng-click="editable2 = true" ng-blur="editable2 = false">ENG 322 5-22...</div>
+				</div>
+				<div class="wb-account df jcsb">
+					<div class="home"></div>
+					<div class="settings"></div>
+					<div class="download" ng-click="showPrerenderedDialog($event, '#downloadCanvas')"></div>
+				</div>
+				<div class="wb-members df bg jcsb fn">
+					<div class="add icon bb cp"></div>
+					<div class="bar"></div>
+					<div class="m-count df">
+						<div class="count dfm bb">6</div>
+						<div class="icon people cp" ng-click="showPrerenderedDialog($event, '#viewCollaborators')"></div>
+					</div>
+				</div>
+				<div class="mh dfw jcsb">
+					<div md-ink-ripple class="wb-toolwo add" ng-click="showPrerenderedDialog($event, '#addMedia')">
+						<div class="toolw">
+							<div class="df">
+								<div class="tool add-media primary"></div>
+							</div>
+						</div>
+					</div>
+					<div md-ink-ripple class="wb-toolwo sticky">
+						<div class="toolw">
+							<div class="df">
+								<div class="tool sticky-note primary"></div>
+							</div>
+						</div>
+					</div>
+					<div md-ink-ripple class="wb-toolwo shape gotsub" ng-class="{'active':shapeActive}" ng-click="shapeActive = !shapeActive" ng-blur="shapeActive = false">
+						<div class="toolw">
+							<div class="df">
+								<div class="tool polygon primary"></div>
+								<div class="tool square"></div>
+								<div class="tool circle"></div>
+								<div class="tool triangle"></div>
+								<div class="tool arrow"></div>
+								<div class="tool line"></div>
+							</div>
+						</div>
+					</div>
+					<div md-ink-ripple class="wb-toolwo mark gotsub"ng-class="{'active':markActive}" ng-click="markActive = !markActive" ng-blur="markActive = false">
+						<div class="toolw">
+							<div class="df">
+								<div class="tool pencl primary"></div>
+								<div class="tool highlighter"></div>
+							</div>
+						</div>
+					</div>
+					<div md-ink-ripple class="wb-toolwo erase">
+						<div class="toolw">
+							<div class="df">
+								<div class="tool eraser primary"></div>
+							</div>
+						</div>
+					</div>
+					<div md-ink-ripple class="wb-toolwo selection gotsub" ng-class="{'active':selectionActive}" ng-click="selectionActive = !selectionActive" ng-blur="selectionActive = false">
+						<div class="toolw">
+							<div class="df">
+								<div class="tool selection primary"></div>
+								<div class="tool move"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mh mt20">
+						<md-slider flex ng-model="sliderHandle" min="0" max="100" aria-label="green" id="wb-slider" class="md-accentt">
+						</md-slider>
+				</div>
+				<div class="wb-circles dfw jcsb">
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'coral'}" ng-click="activeCircle = 'coral'">
+						<div class="circleIn coral"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'darkOrange'}" ng-click="activeCircle = 'darkOrange'">
+						<div class="circleIn darkOrange"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'yellow'}" ng-click="activeCircle = 'yellow'">
+						<div class="circleIn yellow"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'azure'}" ng-click="activeCircle = 'azure'">
+						<div class="circleIn azure"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'green'}" ng-click="activeCircle = 'green'">
+						<div class="circleIn green"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'blue'}" ng-click="activeCircle = 'blue'">
+						<div class="circleIn blue"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'lilac'}" ng-click="activeCircle = 'lilac'">
+						<div class="circleIn lilac"></div>
+					</div>
+					<div class="wb-circle" ng-class="{'active' : activeCircle == 'blackPearl'}" ng-click="activeCircle = 'blackPearl'">
+						<div class="circleIn blackPearl"></div>
+					</div>
+				</div>
+				<div class="f1"></div>
+				<div class="wb-sticky-foot bg df">
+					<div class="f10 bzc"></div>
+					<div class="bar"></div>
+					<div class="f10 bzc" ng-click="showNotification()" ng-animate></div>
+					<div class="bar"></div>
+					<div class="f10 bzc"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="wb-content tc bb pr">
+			<div class="wb-canvasw whf bb pr">
+				<canvas id="wb-canvas" class="wb-canvas whf pr"></canvas>
+				<div class="wb-notification bb pa fade" ng-show="notification">
+					<div class="df aic jcsb">
+					<div class="copy fn">
+						<div class="name">Jonathan O.</div>
+						<div class="info">Raised their hand</div>
+					</div>
+					<div class="hand-raiser fn"></div>
+					</div>
+				</div>
+				<div class="wb-zoomw bb pa">
+					<div class="zmcontent pr whf"></div>
+					<div class="zmbtns pa df">
+						<div class="zmbtn full-screen"></div>
+						<div class="zmbtn zoom-out"></div>
+						<div class="zmbtn zoom-in"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+	<div class="dialog-container">
+
+		<div class="md-dialog-container" id="downloadCanvas">
+			<md-dialog>
+				<div class="dfc dg-dc fn">
+					<div class="dg-head dfm pr fn">
+						download canvas
+						<div class="dg-close pa cp" ng-click="closeDialog()"></div>
+					</div>
+					<div class="dg-content fn dfm">
+						<div class="dg-media">.svg</div>
+						<div class="dg-media">.png</div>
+					</div>
+					<div class="dg-foot fn dfm">
+						<md-button class="dg-btn">Save</md-button>
+					</div>
+				</div>
+			</md-dialog>
+		</div>
+
+		<div class="md-dialog-container" id="addMedia">
+			<md-dialog>
+				<div class="dfc dg-am fn">
+					<div class="dg-head dfm pr fn">
+						ADD MEDIA
+						<div class="dg-close pa cp" ng-click="closeDialog()"></div>
+					</div>
+					<div class="dg-content fn dfm">
+						<div class="dg-media image">image</div>
+						<div class="dg-media video">video</div>
+						<div class="dg-media msoffice">ms office</div>
+						<div class="dg-media pdf">pdf</div>
+					</div>
+					<div class="dg-foot fn dfm">
+						<md-button class="dg-btn">Choose File</md-button>
+					</div>
+				</div>
+			</md-dialog>
+		</div>
+
+		<div class="md-dialog-container" id="viewCollaborators">
+			<md-dialog>
+				<div class="dfc dg-vc fn">
+					<div class="dg-head dfm pr">
+						<div class="copy">COLLABORATORS</div>
+						<md-button class="dg-btn btn-addColaborator bb pa"></md-button>
+					</div>
+					<div class="dg-vc-content fn">
+						<div class="dg-vc-person">
+							<div class="name">Tyler Ackelbein</div>
+							<div class="join-date">JOINED: 06/10/16</div>
+							<div class="logged in"></div>
+						</div>
+						<div class="dg-vc-person">
+							<div class="name">Tyler Ackelbein</div>
+							<div class="join-date">JOINED: 06/10/16</div>
+							<div class="logged out"></div>
+						</div>
+						<div class="dg-vc-person">
+							<div class="name">Tyler Ackelbein</div>
+							<div class="join-date">JOINED: 06/10/16</div>
+							<div class="logged out"></div>
+						</div>
+						<div class="dg-vc-person">
+							<div class="name">Tyler Ackelbein</div>
+							<div class="join-date">JOINED: 06/10/16</div>
+							<div class="logged out"></div>
+						</div>
+						<div class="dg-vc-person">
+							<div class="name">Tyler Ackelbein</div>
+							<div class="join-date">JOINED: 06/10/16</div>
+							<div class="logged out"></div>
+						</div>
+						<div class="dg-vc-person">
+							<div class="name">Tyler Ackelbein</div>
+							<div class="join-date">JOINED: 06/10/16</div>
+							<div class="logged out"></div>
+						</div>
+					</div>
+					<div class="dg-foot dfm fn">
+						<md-button class="dg-btn cancel mr40" ng-click="closeDialog()">Close</md-button>
+						<md-button class="dg-btn">Save</md-button>
+					</div>
+				</div>
+			</md-dialog>
+		</div>
+	</div>
+
+	<script src="assets/js/libs-pack.js"></script>
+	<script src="assets/js/app-members-wb.js"></script>
+</body>
+</html>

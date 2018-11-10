@@ -1,0 +1,12 @@
+# MAC
+.DS_Store
+
+# WIN
+Thumbs.db
+
+# SASS
+.sass-cache/
+*.css.map
+
+# ignore the compiled css
+*.css

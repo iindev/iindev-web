@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*
+	Title:		TKM Consultants
+	Date:		March 23, 2013
+--------------------------------------------------------------			
+*/
+
+	/* COMMON ELEMENTS */
+@font-face{
+	font-family:'CaeciliaLTStd-Heavy';
+	src:url('../fonts/caecilialtstdheavy.eot');
+	src:url('../fonts/caecilialtstdheavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/caecilialtstdheavy.woff') format('woff'),
+		url('../fonts/caecilialtstdheavy.ttf') format('truetype'),
+		url('../fonts/caecilialtstdheavy.svg#caecilialtstdheavy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family:'FuturaStd-Heavy';
+	src:url('../fonts/futurastdheavy.eot');
+	src:url('../fonts/futurastdheavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/futurastdheavy.woff') format('woff'),
+		url('../fonts/futurastdheavy.ttf') format('truetype'),
+		url('../fonts/futurastdheavy.svg#futurastdheavy') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{margin:0;padding:0;-webkit-text-size-adjust: 100%;-moz-text-size-adjust:100%;font-family:"Century Gothic", Arial, serif;color:#333333}
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{border:0}
+a,input,select,textarea{outline:none}
+input::-moz-focus-inner{border:0;padding:0}
+
+article,aside,figure,figcaption,footer,hgroup,header,nav,section{display:block}
+.btm-spacer{clear:both;height:20px;font-size:4px;line-height:4px}
+	/* COMMON ELEMENTS */
+
+.main-wrap,.header-outer,.home-outer,.about-outer,.services-outer{clear:both;min-width:1024px;position:relative}
+.main-wrap{ overflow:hidden;}
+
+.header-outer{ width:100%;position:fixed;top:0;z-index:11;background:#3b3939;min-height:62px;margin:0 auto;}
+.header{ clear:both;width:1000px;min-height:62px;padding:0 12px; margin:0 auto;background:#3b3939;}
+#logo img{float:left;width:auto;margin:11px 0 0}
+
+.header ul{float:right;width:auto;margin:0;padding:20px 0 0;list-style:none}
+.header li{float:left;width:auto;padding:0px 20px 0px;font-family:'FuturaStd-Heavy',"Century Gothic", Arial, serif;font-size:13px;line-height:22px;color:#959595;text-decoration:none;position:relative; cursor:pointer;}
+.header li.active{background:#f5f4f1;color:#459ba8;-moz-border-radius:11px;-webkit-border-radius:11px;border-radius:11px}
+
+.section{clear:both;width:1024px;margin:0 auto;position:relative;z-index:2}
+
+	/* Begin home section */
+.home-outer{background:#c3dfe2 url(../images/main-repeat-x.png) repeat-x fixed left top; position:relative; z-index:3}
+#home{ height:2000px; position:relative; width:100%;}
+#home-inner{position:fixed;left:0;bottom:0;width:100%;height:768px;}
+.section h1,.section h2,.section h3,.section h4,.section p{margin:0;padding:0}
+.section h2{clear:both;padding-top:52px;font:400 36px/40px Georgia, serif;color:#3699a9}
+.welcome-text{width:1024px;position:absolute;top:232px;text-align:center;font:36px/40px Georgia, serif;color:#fff}
+#down-arrow{position:absolute;left:487px;top:392px;width:48px;height:47px;background:url(../images/down-arrow.png) no-repeat;cursor:pointer}
+#home-content{width:1024px;height:100%; margin:0 auto;position:relative;/*;position:fixed;bottom:0;z-index:5;*/}
+#btm-grass{width:100%;height:41px;position:absolute;left:0;bottom:0;z-index:9;background:url(../images/grass.png) repeat-x;}
+
+.touch #home-inner{position:absolute;}
+
+#tree1,#tree2,#tree3,#tree4,#tree5,#tree-txt{position:absolute;right:43px}
+#tree1{bottom:0;}
+#tree2{right:auto;left:523px;bottom:-339px;z-index:5}
+#tree3{right:auto;left:325px;bottom:-400px;z-index:3}
+#tree4{right:auto;left:188px;bottom:-328px;z-index:4}
+#tree5{right:auto;left:43px;bottom:-335px;z-index:2}
+#tree-txt{right:auto;left:0;width:100%;height:400px;text-align:center;bottom:-400px;z-index:1;font:36px/40px Georgia, serif;color:#fff}
+	/* End home section */
+
+	/* Begin about section */
+.about-outer{background:url(../images/pattern-repeat1.png) repeat; position:relative; z-index:5}
+#about,#clients,#services,#contact{width:944px;min-height:396px;padding:62px 0 30px 80px;}
+.intro-txt{clear:both;width:850px;padding-top:10px;font:21px/26px Georgia, serif}
+.about-feature-row{float:left;width:944px;min-height:242px;margin-top:70px;background:url(../images/divider-line-y.png) repeat-y left top;position:relative}
+.about-feature-col{float:left;width:286px;padding-right:1px;margin:0}
+.about-feature-col h3{clear:both;padding-top:22px;font:400 26px/30px Georgia, serif;color:#3699a9;text-align:center}
+.about-feature-col p{clear:both;padding-top:15px;font-size:18px;line-height:20px;text-align:center}
+.about-feature-icon{float:left;width:286px;height:90px;overflow:hidden;text-align:center}
+	/* End about section */
+
+	/* Begin clients section */
+.clients-outer{background:url(../images/pattern-repeat2.png) repeat; position:relative; z-index:6}
+#clients{width:1000px;padding-left:24px}
+#clients h2{padding-left:56px}
+#clients .intro-txt{margin-left:56px}
+.clients-logo-section{float:left;width:1000px;margin:0}
+.clients-logo-section > div{float:left;display:inline;width:220px;height:120px;margin:40px 57px 0 56px;overflow:hidden}
+.clients-logo-section img{float:left;width:auto;margin:0}
+	/* End clients section */
+
+	/* Begin services section */
+.services-outer{background:url(../images/pattern-repeat2.png) repeat; position:relative; z-index:7}
+#services{padding-bottom:100px;position:relative}
+#services-categories{float:left;width:944px;margin-top:25px;position:relative}
+#services-categories ul{float:left;width:auto;margin:0;padding:0;list-style:none}
+#services-categories li{float:left;width:162px;padding-right:15px;cursor:pointer}
+#services-categories li > div{width:108px;height:107px;margin:0 auto;overflow:hidden}
+
+#services-categories li.icon-set1 > div{background:url(../images/icon-set1.png) no-repeat 0 0}
+#services-categories li.icon-set2 > div{background:url(../images/icon-set2.png) no-repeat 0 0}
+#services-categories li.icon-set3 > div{background:url(../images/icon-set3.png) no-repeat 0 0}
+#services-categories li.icon-set4 > div{background:url(../images/icon-set4.png) no-repeat 0 0}
+#services-categories li.icon-set5 > div{background:url(../images/icon-set5.png) no-repeat 0 0}
+
+#services-categories li.active > div{background-position:0 -200px}
+#services-categories li span{display:block;float:left;width:162px;padding-top:22px;text-align:center;color:#c1c1c1;font-size:14px;line-height:18px; font-family:'CaeciliaLTStd-Heavy',Georgia, Times, serif;}
+#services-categories li.active span{color:#3699a9}
+
+#services-categories-description{float:left;width:944px;margin-top:20px}
+#services-categories-description ul{clear:both;width:944px;min-height:200px;margin:0;padding:12px 0 0;list-style:none;display:none}
+#services-categories-description li{clear:both;padding-left:24px;background:url(../images/bullet.png) no-repeat 0 8px;font-size:18px;line-height:22px;color:#333}
+
+#left-scroll-btn,#right-scroll-btn{position:absolute;left:445px;bottom:45px;width:48px;height:47px;background:url(../images/left-right-scroll-arrow.png) no-repeat 0 0;cursor:pointer}
+#right-scroll-btn{left:515px;background-position:0 -100px}
+	/* End services section */
+
+	/* Begin contact section */
+.contact-outer{background:url(../images/contact-repeat.png) repeat; position:relative; z-index:8}
+#contact{width:864px;min-height:396px;padding:62px 80px 30px;}
+.contact-inner{width:208px;margin:0 auto;padding-top:172px;text-align:center}
+.contact-inner h2{padding-top:20px;font-size:43px;line-height:46px;color:#eeede4}
+.contact-inner p{clear:both;padding:12px 0 0 5px;color:#f2f2f2;font-size:12px;line-height:16px;text-align:left}
+.contact-inner p a{color:#f2f2f2;text-decoration:none}
+
+.link-btn{display:block;clear:both;width:208px;height:30px;padding:3px 0 5px;margin-top:18px;background:#ecece3;-moz-border-radius:19px;-webkit-border-radius:19px;border-radius:19px;position:relative;color:#3c393a;text-decoration:none;font-size:16px;line-height:30px}
+.social-media-bar{clear:both;width:160px;height:92px;margin-top:33px;padding-left:48px;background:url(../images/social-media-line.png) no-repeat center top;overflow:hidden}
+.social-media-bar img{float:left;width:auto;margin:19px 30px 0 0}
+	/* End contact section */
